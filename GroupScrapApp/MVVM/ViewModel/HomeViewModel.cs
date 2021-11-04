@@ -44,7 +44,7 @@ namespace GroupScrapApp.MVVM.ViewModel
                     {
                         Debug.WriteLine("ERR, EMPTY FILE");
                     }
-                    Process p = Process.Start(@"StorrageFold\GroupScrap.exe", "GroupScrap.exe");
+                    Process p = Process.Start(@"StorrageFold\GroupScrap.exe", "");
                 }
             });
         }
