@@ -22,8 +22,8 @@ namespace GroupScrapApp.MVVM.ViewModel
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        private decimal val;
-        public decimal Val
+        private String val;
+        public String Val
         {
             get { return val; }
             set
@@ -44,21 +44,9 @@ namespace GroupScrapApp.MVVM.ViewModel
                     {
                         Debug.WriteLine("ERR, EMPTY FILE");
                     }
-                    Process p = Process.Start(@"C:\Users\shish\Source\Repos\MixKage\GroupScrapApp\GroupScrapApp\bin\Debug\StorrageFold\GetWeb.exe", "https://events.webinar.ru/3865279/9409989/0efbf93da511bae0786a831977663834");
+                    Process p = Process.Start(@"C:\Users\Valerij\source\repos\GroupScrapApp\GroupScrapApp\bin\Debug\StorrageFold\GetWeb.exe", "https://events.webinar.ru/3865279/9409989/0efbf93da511bae0786a831977663834");
                 }
             });
-            checkIsFirstStart();
-        }
-
-        void checkIsFirstStart()
-        {
-            if (Properties.Settings.Default.FirstStart == true)
-            {
-                Properties.Settings.Default.FirstStart = false;
-                Debug.WriteLine("YES");
-            }
-            else 
-                Debug.WriteLine("NO");
         }
     }
 }

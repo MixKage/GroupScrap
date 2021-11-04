@@ -21,6 +21,7 @@ namespace GroupScrapApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        int countTap = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -28,14 +29,80 @@ namespace GroupScrapApp
             this.DataContext = vm;
             if (vm.CloseAction == null)
                 vm.CloseAction = new Action(this.Close);
+            IsFirstStart();
         }
 
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
         {
             base.OnMouseLeftButtonDown(e);
-
-            // Begin dragging the window
             this.DragMove();
+        }
+
+        private void IsFirstStart()
+        {
+            if (Properties.Settings.Default.FirstStart)
+            {
+                MyDialog.IsOpen = true;
+            }
+        }
+
+        private void ButtonDialog_Click(object sender, RoutedEventArgs e)
+        {
+            countTap++;
+            switch (countTap)
+            {
+                case 1:
+                    BackButton.Visibility = Visibility.Visible;
+                    TextInDialog.Text = "Цель программы - подключиться к вебинару (в прямом эфере или записи) и получить список присутствующих.";
+                    break;
+                case 2:
+                    TextInDialog.Text = "Для этого, она сравнивает списки сайта и твоей группы. Программа умеет распозновать транслит и учитывать вариативность имён.";
+                    break;
+                case 3:
+                    TextInDialog.Text = "Обсалютно всё настраивается (алфавит транслита, список вариативных имён, список якобы присутствующих). Все данные хранятся в .txt файлах.";
+                    break;
+                case 4:
+                    TextInDialog.Text = "Доступ к ним можно получить через вкладку настроек. Очень важно соблюдать правила, по которым эти файлы были записаны.";
+                    break;
+                case 5:
+                    TextInDialog.Text = "Файлы уже заполнены тестовой информацией. Удачи! :)";
+                    ContinueButton.Content = "Закрыть";
+                    break;
+                case 6:
+                    MyDialog.IsOpen = false;
+                    Properties.Settings.Default.FirstStart = false;
+                    Properties.Settings.Default.Save();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void ButtonDialog2_Click(object sender, RoutedEventArgs e)
+        {
+            countTap--;
+            switch (countTap)
+            {
+                case 0:
+                    BackButton.Visibility = Visibility.Collapsed;
+                    TextInDialog.Text = "Добро пожаловать в GroupScrap! Сейчас, мы поможем разобраться в программе.";
+                    break;
+                case 1:
+                    TextInDialog.Text = "Цель программы - подключиться к вебинару (в прямом эфере или записи) и получить список присутствующих.";
+                    break;
+                case 2:
+                    TextInDialog.Text = "Для этого, она сравнивает списки сайта и твоей группы. Программа умеет распозновать транслит и учитывать вариативность имён.";
+                    break;
+                case 3:
+                    TextInDialog.Text = "Обсалютно всё настраивается (алфавит транслита, список вариативных имён, список якобы присутствующих). Все данные хранятся в .txt файлах.";
+                    break;
+                case 4:
+                    TextInDialog.Text = "Доступ к ним можно получить через вкладку настроек. Очень важно соблюдать правила, по которым эти файлы были записаны.";
+                    ContinueButton.Content = "Продолжить";
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

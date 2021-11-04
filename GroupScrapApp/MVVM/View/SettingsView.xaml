@@ -4,43 +4,97 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:GroupScrapApp.MVVM.View"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d"
              d:DesignHeight="450"
              d:DesignWidth="800">
     <Grid>
-        <ScrollViewer VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Disabled">
-            <StackPanel>
-                <Button Content="Список группы"
-                        Margin="0,20,0,0"
-                        Background="#353340"
-                        HorizontalAlignment="Center"
-                        Command="{Binding OpenListFile}" />
-                <Button Content="Список присутствующих"
-                        Margin="0,20,0,0"
-                        Background="#353340"
-                        HorizontalAlignment="Center"
-                        Command="{Binding OpenAddListFile}" />
-                <Button Content="Список вариативности имён"
-                        Margin="0,20,0,0"
-                        Background="#353340"
-                        HorizontalAlignment="Center"
-                        Command="{Binding OpenVarListFile}" />
-                <Button Content="Транслитный алфавит"
-                        Margin="0,20,0,0"
-                        Background="#353340"
-                        HorizontalAlignment="Center"
-                        Command="{Binding OpenTranslitListFile}" />
-                <Button Content="Конфигурация движка"
-                        Margin="0,20,0,0"
-                        Background="#353340"
-                        HorizontalAlignment="Center"
-                        Command="{Binding OpenConfListFile}" />
-            </StackPanel>
-        </ScrollViewer>
-        <TextBlock Text="Version 1.0"
-                   Foreground="Wheat"
-                   HorizontalAlignment="Right"
-                   VerticalAlignment="Bottom"
-                   Padding="0,0,5,5" />
+        <materialDesign:DialogHost BorderBrush="{DynamicResource MaterialDesignDivider}" x:Name="DialogSettings">
+            <materialDesign:DialogHost.DialogContent>
+                <Grid Width="300"
+                      Height="200"
+                      HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal"
+                                Margin="15">
+                        <materialDesign:PackIcon Kind="Alert"
+                                                 Foreground="{StaticResource PrimaryHueMidBrush}"
+                                                 Width="50"
+                                                 Height="50" />
+                        <TextBlock Foreground="Gray"
+                                   Width="200"
+                                   Margin="15 5"
+                                   TextWrapping="Wrap">
+                            Allow Application to access photos, media and files on your computer?
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Bottom"
+                                Margin="15">
+                        <Button Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                                Style="{DynamicResource MaterialDesignFlatButton}"
+                                Margin="4"
+                                VerticalAlignment="Center">
+                            Deny
+                        </Button>
+                        <Button Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                                Style="{DynamicResource MaterialDesignFlatButton}"
+                                Margin="4"
+                                VerticalAlignment="Center">
+                            Allow
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </materialDesign:DialogHost.DialogContent>
+            <Grid>
+                <ScrollViewer VerticalScrollBarVisibility="Disabled"
+                              HorizontalScrollBarVisibility="Disabled">
+                    <StackPanel>
+                        <Button Content="Список группы"
+                                Margin="0,20,0,0"
+                                Background="#353340"
+                                Foreground="WhiteSmoke"
+                                HorizontalAlignment="Center"
+                                Command="{Binding OpenListFile}"
+                                Click="GroupListButton"/>
+                        <Button Content="Список присутствующих"
+                                Margin="0,20,0,0"
+                                Background="#353340"
+                                Foreground="WhiteSmoke"
+                                HorizontalAlignment="Center"
+                                Command="{Binding OpenAddListFile}" />
+                        <Button Content="Список вариативности имён"
+                                Margin="0,20,0,0"
+                                Background="#353340"
+                                Foreground="WhiteSmoke"
+                                HorizontalAlignment="Center"
+                                Command="{Binding OpenVarListFile}" />
+                        <Button Content="Транслитный алфавит"
+                                Margin="0,20,0,0"
+                                Background="#353340"
+                                Foreground="WhiteSmoke"
+                                HorizontalAlignment="Center"
+                                Command="{Binding OpenTranslitListFile}" />
+                        <Button Content="Конфигурация движка"
+                                Margin="0,20,0,0"
+                                Background="#353340"
+                                Foreground="WhiteSmoke"
+                                HorizontalAlignment="Center"
+                                Command="{Binding OpenConfListFile}" />
+                        <CheckBox x:Name="CheckBoxHelp"
+                                  Content="Показывать подсказки"
+                                  HorizontalAlignment="Center"
+                                  Margin="0,20,0,0"
+                                  Foreground="WhiteSmoke"
+                                  Click="CheckBoxHelp_Click"/>
+                    </StackPanel>
+                </ScrollViewer>
+                <TextBlock Text="Version 1.0"
+                           Foreground="Wheat"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Bottom"
+                           Padding="0,0,5,5" />
+            </Grid>
+        </materialDesign:DialogHost>
     </Grid>
 </UserControl>

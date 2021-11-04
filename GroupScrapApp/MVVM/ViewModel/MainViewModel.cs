@@ -1,4 +1,5 @@
 ﻿using GroupScrapApp.Core;
+using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -42,7 +43,7 @@ namespace GroupScrapApp.MVVM.ViewModel
         {
             HomeVM = new HomeViewModel();
             SettingsVM = new SettingsViewModel();
-
+            
             CurrentView = HomeVM;
 
             HomeViewCommand = new RelayCommand(o =>

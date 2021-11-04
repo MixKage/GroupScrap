@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GroupScrapApp"
         xmlns:viewModel="clr-namespace:GroupScrapApp.MVVM.ViewModel"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="MainWindow"
         Height="400"
@@ -18,63 +19,106 @@
     <Window.DataContext>
         <viewModel:MainViewModel />
     </Window.DataContext>
+    <Grid>
+        <Border CornerRadius="15">
+            <Border.Background>
+                <ImageBrush ImageSource="/Images/back.jpg"></ImageBrush>
+            </Border.Background>
+            <materialDesign:DialogHost BorderBrush="{DynamicResource MaterialDesignDivider}"
+                                   x:Name="MyDialog">
+            <materialDesign:DialogHost.DialogContent>
+                <Grid Width="300"
+                      Height="200"
+                      HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal"
+                                Margin="15">
+                        <TextBlock x:Name="TextInDialog"
+                                   Foreground="Gray"
+                                   Width="200"
+                                   Margin="15 5"
+                                   TextWrapping="Wrap"
+                                   FontSize="14">
+                            Добро пожаловать в GroupScrap! Сейчас мы поможем разобраться в программе.
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Bottom"
+                                Margin="15">
+                        <Button x:Name="BackButton"
+                                Click="ButtonDialog2_Click"
+                                Style="{DynamicResource MaterialDesignFlatButton}"
+                                Margin="4"
+                                VerticalAlignment="Center"
+                                Visibility="Collapsed">
+                            Назад
+                        </Button>
+                        <Button x:Name="ContinueButton"
+                                Click="ButtonDialog_Click"
+                                Style="{DynamicResource MaterialDesignFlatButton}"
+                                Margin="4"
+                                VerticalAlignment="Center">
+                            Продолжить
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </materialDesign:DialogHost.DialogContent>
 
-    <Border CornerRadius="15">
-        <Border.Background>
-            <ImageBrush ImageSource="/Images/back.jpg"></ImageBrush>
-        </Border.Background>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200" />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="75" />
-                <RowDefinition />
-            </Grid.RowDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="75" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
 
-            <TextBlock  Text="GroupScrap"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Left"
-                        Foreground="Wheat"
-                        FontSize="22"
-                        Margin="20,0,0,0" />
+                    <TextBlock  Text="GroupScrap"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Left"
+                                Foreground="Wheat"
+                                FontSize="22"
+                                Margin="20,0,0,0" />
 
-            <Button Background="Transparent"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Top"
-                    Grid.Column="1"
-                    Width="25"
-                    Height="25"
-                    Margin="0,5,5,0"
-                    BorderThickness="0"
-                    Style="{StaticResource ExitButtonTheme}"
-                    Command="{Binding CloseCommand}">
-            </Button>
-
-            <StackPanel Grid.Row="1">
-                <RadioButton Content="Главная"
-                             Height="50"
-                             Foreground="White"
-                             FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"
-                             IsChecked="True"
-                             Command="{Binding HomeViewCommand}" />
-                <RadioButton Content="Настройки"
-                             Height="50"
-                             Foreground="White"
-                             FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding SettingsViewCommand}" />
-            </StackPanel>
-
-            <ContentControl Grid.Row="1"
+                    <Button Background="Transparent"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
                             Grid.Column="1"
-                            Margin="10"
-                            Content="{Binding CurrentView}" />
+                            Width="25"
+                            Height="25"
+                            Margin="0,5,5,0"
+                            BorderThickness="0"
+                            Style="{StaticResource ExitButtonTheme}"
+                            Command="{Binding CloseCommand}">
+                    </Button>
 
-        </Grid>
+                    <StackPanel Grid.Row="1">
+                        <RadioButton Content="Главная"
+                                     Height="50"
+                                     Foreground="White"
+                                     FontSize="14"
+                                     Style="{StaticResource MenuButtonTheme}"
+                                     IsChecked="True"
+                                     Command="{Binding HomeViewCommand}" />
+                        <RadioButton Content="Настройки"
+                                     Height="50"
+                                     Foreground="White"
+                                     FontSize="14"
+                                     Style="{StaticResource MenuButtonTheme}"
+                                     Command="{Binding SettingsViewCommand}" />
+                    </StackPanel>
 
-    </Border>
+                    <ContentControl Grid.Row="1"
+                                    Grid.Column="1"
+                                    Margin="10"
+                                    Content="{Binding CurrentView}" />
+
+                </Grid>
+
+         
+        </materialDesign:DialogHost>
+        </Border>
+    </Grid>
 </Window>

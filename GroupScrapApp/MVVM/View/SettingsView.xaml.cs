@@ -23,6 +23,18 @@ namespace GroupScrapApp.MVVM.View
         public SettingsView()
         {
             InitializeComponent();
+            CheckBoxHelp.IsChecked = Properties.Settings.Default.Helper;
+        }
+        private void GroupListButton(object sender, RoutedEventArgs e)
+        {
+            if (Properties.Settings.Default.Helper)
+                DialogSettings.IsOpen = true;
+        }
+
+        private void CheckBoxHelp_Click(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.Helper = (bool)CheckBoxHelp.IsChecked;
+            Properties.Settings.Default.Save();
         }
     }
 }
