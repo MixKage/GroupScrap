@@ -6,23 +6,32 @@
         xmlns:local="clr-namespace:GroupScrapApp"
         xmlns:viewModel="clr-namespace:GroupScrapApp.MVVM.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="920"
-        WindowStyle="None" ResizeMode="NoResize" Background="Transparent" AllowsTransparency="True">
+        Title="MainWindow"
+        Height="400"
+        Width="620"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen">
 
     <Window.DataContext>
-        <viewModel:MainViewModel/>
+        <viewModel:MainViewModel />
     </Window.DataContext>
 
-    <Border Background="#272537" CornerRadius="15">
+    <Border CornerRadius="15">
+        <Border.Background>
+            <ImageBrush ImageSource="/Images/back.jpg"></ImageBrush>
+        </Border.Background>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="75"/>
-                <RowDefinition/>
+                <RowDefinition Height="75" />
+                <RowDefinition />
             </Grid.RowDefinitions>
 
             <TextBlock  Text="GroupScrap"
@@ -30,7 +39,7 @@
                         HorizontalAlignment="Left"
                         Foreground="Wheat"
                         FontSize="22"
-                        Margin="20,0,0,0"/>
+                        Margin="20,0,0,0" />
 
             <Button Background="Transparent"
                     HorizontalAlignment="Right"
@@ -45,31 +54,25 @@
             </Button>
 
             <StackPanel Grid.Row="1">
-                <RadioButton Content="Home"
+                <RadioButton Content="Главная"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="True"
-                             Command="{Binding HomeViewCommand}"/>
-                <RadioButton Content="No Home"
+                             Command="{Binding HomeViewCommand}" />
+                <RadioButton Content="Настройки"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding SettingsViewCommand}"/>
-
-                <RadioButton Content="Settings"
-                             Height="50"
-                             Foreground="White"
-                             FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Command="{Binding SettingsViewCommand}" />
             </StackPanel>
 
             <ContentControl Grid.Row="1"
                             Grid.Column="1"
                             Margin="10"
-                            Content="{Binding CurrentView}"/>
+                            Content="{Binding CurrentView}" />
 
         </Grid>
 

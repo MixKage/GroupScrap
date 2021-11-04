@@ -10,8 +10,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
-                <ResourceDictionary Source="Theme/TextBoxTheme.xaml"/>
-                <ResourceDictionary Source="Theme/ExitButtonTheme2.xaml"/>
+                <ResourceDictionary Source="Theme/TextBoxTheme.xaml" />
                 <ResourceDictionary Source="Theme/ExitButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/ButtonTheme.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml" />

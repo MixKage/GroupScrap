@@ -101,10 +101,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Theme\ExitButtonTheme2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Theme\MenuButtonTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -157,6 +153,7 @@
     <Resource Include="Images\close.png" />
     <Resource Include="StorrageFold\addList.txt" />
     <Resource Include="StorrageFold\alfavitTranslit.txt" />
+    <Resource Include="Images\back.jpg" />
     <Content Include="StorrageFold\chromedriver.exe" />
     <Content Include="StorrageFold\comparison_engine.exe" />
     <Resource Include="StorrageFold\configEngine.txt" />
