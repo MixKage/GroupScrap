@@ -38,13 +38,24 @@ namespace GroupScrapApp.MVVM.ViewModel
             StartProgrammCommand = new RelayCommand(o =>
             {
                 //var uri2 = new System.Uri(@"\StorrageFold\groupList.txt");
-                using (var s = new StreamReader(@"StorrageFold\groupList.txt", Encoding.UTF8))
+                using (var s = new StreamReader(@"groupList.txt", Encoding.UTF8))
                 {
-                    if(s.ReadLine() == null)
+                    if (s.ReadLine() == null)
                     {
                         Debug.WriteLine("ERR, EMPTY FILE");
+                        return;
                     }
-                    Process p = Process.Start(@"C:\Users\Valerij\source\repos\GroupScrapApp\GroupScrapApp\bin\Debug\StorrageFold\GetWeb.exe", "https://events.webinar.ru/3865279/9409989/0efbf93da511bae0786a831977663834");
+                    if (val == null)
+                    {
+                        Debug.WriteLine("ERR, EMPTY VAL");
+                        return;
+                    }
+                    Process p = Process.Start(@"GetWeb.exe", Val);
+                    p.WaitForExit();
+                    if (p.ExitCode != 0)
+                    {
+
+                    }
                 }
             });
         }

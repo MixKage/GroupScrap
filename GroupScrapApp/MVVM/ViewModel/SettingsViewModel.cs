@@ -12,8 +12,6 @@ namespace GroupScrapApp.MVVM.ViewModel
     {
         public RelayCommand OpenListFile { get; set; }
 
-        public RelayCommand OpenAddListFile { get; set; }
-
         public RelayCommand OpenVarListFile { get; set; }
 
         public RelayCommand OpenTranslitListFile { get; set; }
@@ -24,27 +22,22 @@ namespace GroupScrapApp.MVVM.ViewModel
         {
             OpenListFile = new RelayCommand(o =>
             {
-                Process p = Process.Start("notepad.exe", @"StorrageFold\groupList.txt");
-            });
-
-            OpenAddListFile = new RelayCommand(o =>
-            {
-                Process p = Process.Start("notepad.exe", @"StorrageFold\addList.txt");
+                Process p = Process.Start("notepad.exe", @"groupList.txt");
             });
 
             OpenVarListFile = new RelayCommand(o =>
             {
-                Process p = Process.Start("notepad.exe", @"StorrageFold\variabilityName.txt");
+                Process p = Process.Start("notepad.exe", @"variabilityName.txt");
             });
 
             OpenTranslitListFile = new RelayCommand(o =>
             {
-                Process p = Process.Start("notepad.exe", @"StorrageFold\alfavitTranslit.txt");
+                Process p = Process.Start("notepad.exe", @"alfavitTranslit.txt");
             });
 
             OpenConfListFile = new RelayCommand(o =>
             {
-                Process p = Process.Start("notepad.exe", @"StorrageFold\configEngine.txt");
+                Process p = Process.Start("notepad.exe", @"configEngine.txt");
             });
         }
     }

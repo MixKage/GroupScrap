@@ -12,17 +12,17 @@
 
                         <Grid>
                             <Rectangle StrokeThickness="1"/>
-                            <TextBox Margin="1"
-                                     Text="{TemplateBinding Text}"
+                            <TextBox Margin="7,0,7,0"
                                      BorderThickness="0"
                                      Background="Transparent"
                                      VerticalAlignment="Center"
                                      Padding="5"
                                      Foreground="#CFCFCF"
-                                     x:Name="Search"/>
+                                     x:Name="Search"
+                                     Style="{x:Null}"/>
 
                             <TextBlock IsHitTestVisible="False"
-                                       Text=""
+                                       Text="Ссылка"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Left"
                                        Margin="10,0,0,0"

@@ -9,22 +9,20 @@
              d:DesignWidth="800"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
     <Grid>
-        <materialDesign:DialogHost BorderBrush="{DynamicResource MaterialDesignDivider}">
+        <materialDesign:DialogHost BorderBrush="{DynamicResource MaterialDesignDivider}" x:Name="dialogHome">
             <materialDesign:DialogHost.DialogContent>
                 <Grid Width="300"
                       Height="150"
                       HorizontalAlignment="Center">
                     <StackPanel Orientation="Horizontal"
                                 Margin="15">
-                        <materialDesign:PackIcon Kind="Folder"
-                                                 Foreground="{StaticResource PrimaryHueMidBrush}"
-                                                 Width="50"
-                                                 Height="50" />
-                        <TextBlock Foreground="Gray"
+                        <TextBlock x:Name="textBlockDialog"
+                                   Foreground="Gray"
                                    Width="200"
+                                   FontSize="14"
                                    Margin="15 5"
                                    TextWrapping="Wrap">
-                            Allow Application to access photos, media and files on your computer?
+                            Если Chrome завис - нажмите 'Ctrl +'.
                         </TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal"
@@ -35,13 +33,7 @@
                                 Style="{DynamicResource MaterialDesignFlatButton}"
                                 Margin="4"
                                 VerticalAlignment="Center">
-                            Deny
-                        </Button>
-                        <Button Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
-                                Style="{DynamicResource MaterialDesignFlatButton}"
-                                Margin="4"
-                                VerticalAlignment="Center">
-                            Allow
+                            Закрыть
                         </Button>
                     </StackPanel>
                 </Grid>
@@ -49,27 +41,22 @@
             <Grid>
                 <StackPanel Margin="0,0,0,10"
                             HorizontalAlignment="Center">
-
-                    <TextBox Text="{Binding Val, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                             Width="250"
-                             Height="40"
+                    <TextBox x:Name="textBoxUri"
                              materialDesign:HintAssist.Hint="Ссылка"
                              materialDesign:HintAssist.IsFloating="True"
+                             Width="250"
+                             Height="40"
+                             Foreground="WhiteSmoke"
                              VerticalAlignment="Center"
                              HorizontalAlignment="Left"
                              Margin="5"
-                             Grid.Column="1"
-                             Style="{StaticResource ModerTextbox}" />
+                             KeyDown="textBoxUri_KeyDown"/>
                     <Button Content="Получить список присутсвующих"
                             Margin="0,20,0,0"
                             Background="#353340"
+                            Foreground="WhiteSmoke"
                             HorizontalAlignment="Center"
-                            Command="{Binding StartProgrammCommand}" />
-                    <Button Content="Диалоговое окно"
-                            Margin="0,20,0,0"
-                            Background="#353340"
-                            HorizontalAlignment="Center"
-                            Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}" />
+                            Click="Button_Click" />
                 </StackPanel>
             </Grid>
         </materialDesign:DialogHost>

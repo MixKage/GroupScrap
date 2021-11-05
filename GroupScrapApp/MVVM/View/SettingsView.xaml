@@ -9,39 +9,40 @@
              d:DesignHeight="450"
              d:DesignWidth="800">
     <Grid>
-        <materialDesign:DialogHost BorderBrush="{DynamicResource MaterialDesignDivider}" x:Name="DialogSettings">
+        <materialDesign:DialogHost BorderBrush="{DynamicResource MaterialDesignDivider}"
+                                   x:Name="DialogSettings">
             <materialDesign:DialogHost.DialogContent>
                 <Grid Width="300"
                       Height="200"
                       HorizontalAlignment="Center">
-                    <StackPanel Orientation="Horizontal"
-                                Margin="15">
-                        <materialDesign:PackIcon Kind="Alert"
-                                                 Foreground="{StaticResource PrimaryHueMidBrush}"
-                                                 Width="50"
-                                                 Height="50" />
-                        <TextBlock Foreground="Gray"
-                                   Width="200"
-                                   Margin="15 5"
-                                   TextWrapping="Wrap">
-                            Allow Application to access photos, media and files on your computer?
-                        </TextBlock>
-                    </StackPanel>
+                    <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                        <StackPanel x:Name="stackPanelDialog"
+                                    Orientation="Vertical"
+                                    Margin="15">
+                            <CheckBox Content="LOLO"
+                                      Visibility="Collapsed"
+                                      HorizontalAlignment="Center" />
+                            <TextBlock x:Name="textDialog"
+                                       Foreground="Gray"
+                                       Width="200"
+                                       Margin="15 5"
+                                       TextWrapping="Wrap"
+                                       FontSize="14">
+                            text
+                            </TextBlock>
+                        </StackPanel>
+                    </ScrollViewer>
                     <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Bottom"
                                 Margin="15">
-                        <Button Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                        <Button x:Name="CloseSettingsDialog"
+                                Click="CloseSettingsDialog_Click"
+                                Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
                                 Style="{DynamicResource MaterialDesignFlatButton}"
                                 Margin="4"
                                 VerticalAlignment="Center">
-                            Deny
-                        </Button>
-                        <Button Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
-                                Style="{DynamicResource MaterialDesignFlatButton}"
-                                Margin="4"
-                                VerticalAlignment="Center">
-                            Allow
+                            Закрыть
                         </Button>
                     </StackPanel>
                 </Grid>
@@ -56,37 +57,40 @@
                                 Foreground="WhiteSmoke"
                                 HorizontalAlignment="Center"
                                 Command="{Binding OpenListFile}"
-                                Click="GroupListButton"/>
+                                Click="GroupListButton" />
                         <Button Content="Список присутствующих"
                                 Margin="0,20,0,0"
                                 Background="#353340"
                                 Foreground="WhiteSmoke"
                                 HorizontalAlignment="Center"
-                                Command="{Binding OpenAddListFile}" />
+                                Click="WebListButton" />
                         <Button Content="Список вариативности имён"
                                 Margin="0,20,0,0"
                                 Background="#353340"
                                 Foreground="WhiteSmoke"
                                 HorizontalAlignment="Center"
-                                Command="{Binding OpenVarListFile}" />
+                                Command="{Binding OpenVarListFile}"
+                                Click="VarListButton" />
                         <Button Content="Транслитный алфавит"
                                 Margin="0,20,0,0"
                                 Background="#353340"
                                 Foreground="WhiteSmoke"
                                 HorizontalAlignment="Center"
-                                Command="{Binding OpenTranslitListFile}" />
+                                Command="{Binding OpenTranslitListFile}"
+                                Click="TranslitListButton" />
                         <Button Content="Конфигурация движка"
                                 Margin="0,20,0,0"
                                 Background="#353340"
                                 Foreground="WhiteSmoke"
                                 HorizontalAlignment="Center"
-                                Command="{Binding OpenConfListFile}" />
+                                Command="{Binding OpenConfListFile}"
+                                Click="ConfigListButton" />
                         <CheckBox x:Name="CheckBoxHelp"
                                   Content="Показывать подсказки"
                                   HorizontalAlignment="Center"
                                   Margin="0,20,0,0"
                                   Foreground="WhiteSmoke"
-                                  Click="CheckBoxHelp_Click"/>
+                                  Click="CheckBoxHelp_Click" />
                     </StackPanel>
                 </ScrollViewer>
                 <TextBlock Text="Version 1.0"
