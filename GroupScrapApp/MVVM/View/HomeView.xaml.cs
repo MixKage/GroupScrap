@@ -1,4 +1,5 @@
-﻿using Syncfusion.XlsIO;
+﻿using NPOI.SS.UserModel;
+using NPOI.XSSF.UserModel;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -28,12 +29,8 @@ namespace GroupScrapApp.MVVM.View
         {
             InitializeComponent();
         }
-        public void OpenDialogError()
-        {
 
-        }
-
-        private static void StartScrabPeople(object uri)
+        private void StartScrabPeople(object uri)
         {
             string uriText = (string)uri;
             string err = "";
@@ -43,12 +40,20 @@ namespace GroupScrapApp.MVVM.View
                 {
                     err += DateTime.Now.ToString("HH:mm:ss") + " : " + "ERR, EMPTY FILE" + Environment.NewLine;
                     Debug.WriteLine("ERR, EMPTY FILE");
+                    Dispatcher.Invoke((() =>
+                    {
+                        textBlockDialog.Text = "Ошибка, пустой файл группы";
+                    }));
                     return;
                 }
                 if (uriText == "" || uriText == null)
                 {
                     err += DateTime.Now.ToString("HH:mm:ss") + " : " + "ERR, EMPTY VAL" + Environment.NewLine;
                     Debug.WriteLine("ERR, EMPTY VAL");
+                    Dispatcher.Invoke(() =>
+                    {
+                        textBlockDialog.Text = "Ошибка, путая строка";
+                    });
                     return;
                 }
                 var process = new Process
@@ -66,8 +71,13 @@ namespace GroupScrapApp.MVVM.View
                 process.WaitForExit();
                 if (process.ExitCode != 0)
                 {
-                    err += DateTime.Now.ToString("HH:mm:ss") + " : " + "ERR, GetWeb.exe" + Environment.NewLine;
+                    err += DateTime.Now.ToString("HH:mm:ss") + " : " + "ERR, GetWeb.exe : " + process.ExitCode + Environment.NewLine;
                     Debug.WriteLine("ERR, GetWeb.exe");
+                    Dispatcher.Invoke(() =>
+                    {
+                        textBlockDialog.Text = "Ошибка, GetWeb.exe : " + process.ExitCode;
+                    });
+                    return;
                 }
 
                 var process2 = new Process
@@ -85,8 +95,13 @@ namespace GroupScrapApp.MVVM.View
                 process2.WaitForExit();
                 if (process2.ExitCode != 0)
                 {
-                    err += DateTime.Now.ToString("HH:mm:ss") + " : " + "ERR, Parse.exe" + Environment.NewLine;
+                    err += DateTime.Now.ToString("HH:mm:ss") + " : " + "ERR, Parse.exe : " + process2.ExitCode + Environment.NewLine;
                     Debug.WriteLine("ERR, Parse.exe");
+                    Dispatcher.Invoke(() =>
+                    {
+                        textBlockDialog.Text = "ERR, Parse.exe : " + process2.ExitCode;
+                    });
+                    return;
                 }
 
                 var process3 = new Process
@@ -103,8 +118,13 @@ namespace GroupScrapApp.MVVM.View
                 process3.WaitForExit();
                 if (process3.ExitCode != 0)
                 {
-                    err += DateTime.Now.ToString("HH:mm:ss") + " : " + "ERR, comparison_engine.exe" + Environment.NewLine;
+                    err += DateTime.Now.ToString("HH:mm:ss") + " : " + "ERR, comparison_engine.exe : " + process3.ExitCode + Environment.NewLine;
                     Debug.WriteLine("ERR, comparison_engine.exe");
+                    Dispatcher.Invoke(() =>
+                    {
+                        textBlockDialog.Text = "ERR, comparison_engine.exe : " + process3.ExitCode;
+                    });
+                    return;
                 }
                 if (err != "")
                 {
@@ -113,24 +133,48 @@ namespace GroupScrapApp.MVVM.View
                         sw.Write(err);
                     }
                 }
+                CreateExcel();
+                Dispatcher.Invoke(() =>
+                {
+                    dialogHome.IsOpen = false;
+                });
             }
         }
 
-        public void CreateExcel()
+        public static void CreateExcel()
         {
-            using (ExcelEngine excelEngiene = new ExcelEngine())
+            IWorkbook workbook = new XSSFWorkbook();
+            ISheet sheet = workbook.CreateSheet("Посещаемость");
+            IRow row = sheet.CreateRow(0);
+            ICell cell = row.CreateCell(0);
+            cell.SetCellValue("ФИО");
+            cell = row.CreateCell(1);
+            cell.SetCellValue(DateTime.Now.ToString("dd:MM"));
+
+            int index = 0;
+            List<string> outputList = new List<string>();
+            foreach (string line in File.ReadLines(@"outputList.txt", Encoding.UTF8)) { outputList.Add(line); }
+
+            foreach (string line in File.ReadLines(@"groupList.txt", Encoding.UTF8))
             {
-                IApplication application = excelEngiene.Excel;
-
-                application.DefaultVersion = ExcelVersion.Excel2013;
-
-                IWorkbook workbook = application.Workbooks.Create(1);
-                IWorksheet worksheet = workbook.Worksheets[0];
-
-                workbook.SaveAs("Output.xlsx");
+                row = sheet.CreateRow(index + 1);
+                cell = row.CreateCell(0);
+                cell.SetCellValue(line);
+                cell = row.CreateCell(1);
+                ICellStyle styleMiddle = workbook.CreateCellStyle();
+                styleMiddle.Alignment = NPOI.SS.UserModel.HorizontalAlignment.Center;
+                cell.CellStyle = styleMiddle;
+                cell.SetCellValue(outputList[index]);
+                index++;
             }
-            Process.Start("Output.xlsx");
 
+            for (int i = 0; i <= 20; i++) sheet.AutoSizeColumn(i);
+            using (FileStream fs = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write))
+            {
+                workbook.Write(fs);
+            }
+
+            Process.Start("Output.xlsx");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -140,8 +184,18 @@ namespace GroupScrapApp.MVVM.View
                 textBlockDialog.Text = "Поле с ссылкой путое!";
             else
                 textBlockDialog.Text = "Если Chrome завис - нажмите 'Ctrl +'";
-            Thread processThread = new Thread(new ParameterizedThreadStart(StartScrabPeople));
-            processThread.Start(textBoxUri.Text.ToString());
+            try
+            {
+                using (FileStream fs = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write)) { }
+                Task.Factory.StartNew(() =>
+                {
+                    StartScrabPeople(s);
+                });
+            }
+            catch
+            {
+                textBlockDialog.Text = "Excel открыт и не даёт открыть файл Output.xlsx на запись!";
+            }
             dialogHome.IsOpen = true;
         }
 

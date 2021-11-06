@@ -9,7 +9,7 @@
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Border CornerRadius="10"
                                 Background="#353340"
-                                Width="Auto"
+                                Width="230"
                                 Height="Auto"
                                 Name="border">
                             <Grid>

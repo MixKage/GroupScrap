@@ -53,38 +53,79 @@
                     <StackPanel>
                         <Button Content="Список группы"
                                 Margin="0,20,0,0"
+                                Width="230"
+                                Height="30"
                                 Background="#353340"
                                 Foreground="WhiteSmoke"
                                 HorizontalAlignment="Center"
                                 Command="{Binding OpenListFile}"
-                                Click="GroupListButton" />
+                                Click="GroupListButton"
+                                Style="{StaticResource MaterialDesignFlatSecondaryDarkBgButton}">
+                            <Button.Resources>
+                                <SolidColorBrush x:Key="PrimaryHueMidBrush"
+                                                 Color="BlueViolet"
+                                                 Opacity="0"/>
+                            </Button.Resources>
+                        </Button>
                         <Button Content="Список присутствующих"
                                 Margin="0,20,0,0"
+                                Width="230"
                                 Background="#353340"
                                 Foreground="WhiteSmoke"
                                 HorizontalAlignment="Center"
-                                Click="WebListButton" />
+                                Click="WebListButton"
+                                Style="{StaticResource MaterialDesignFlatSecondaryDarkBgButton}">
+                            <Button.Resources>
+                                <SolidColorBrush x:Key="PrimaryHueMidBrush"
+                                                 Color="BlueViolet"
+                                                 Opacity="0" />
+                            </Button.Resources>
+                        </Button>
                         <Button Content="Список вариативности имён"
                                 Margin="0,20,0,0"
+                                Width="230"
                                 Background="#353340"
                                 Foreground="WhiteSmoke"
                                 HorizontalAlignment="Center"
                                 Command="{Binding OpenVarListFile}"
-                                Click="VarListButton" />
+                                Click="VarListButton"
+                                Style="{StaticResource MaterialDesignFlatSecondaryDarkBgButton}">
+                            <Button.Resources>
+                                <SolidColorBrush x:Key="PrimaryHueMidBrush"
+                                                 Color="BlueViolet"
+                                                 Opacity="0" />
+                            </Button.Resources>
+                        </Button>
                         <Button Content="Транслитный алфавит"
                                 Margin="0,20,0,0"
+                                Width="230"
                                 Background="#353340"
                                 Foreground="WhiteSmoke"
                                 HorizontalAlignment="Center"
                                 Command="{Binding OpenTranslitListFile}"
-                                Click="TranslitListButton" />
+                                Click="TranslitListButton"
+                                Style="{StaticResource MaterialDesignFlatSecondaryDarkBgButton}">
+                            <Button.Resources>
+                                <SolidColorBrush x:Key="PrimaryHueMidBrush"
+                                                 Color="BlueViolet"
+                                                 Opacity="0" />
+                            </Button.Resources>
+                        </Button>
                         <Button Content="Конфигурация движка"
                                 Margin="0,20,0,0"
+                                Width="230"
                                 Background="#353340"
                                 Foreground="WhiteSmoke"
                                 HorizontalAlignment="Center"
                                 Command="{Binding OpenConfListFile}"
-                                Click="ConfigListButton" />
+                                Click="ConfigListButton"
+                                Style="{StaticResource MaterialDesignFlatSecondaryDarkBgButton}">
+                            <Button.Resources>
+                                <SolidColorBrush x:Key="PrimaryHueMidBrush"
+                                                 Color="BlueViolet"
+                                                 Opacity="0" />
+                            </Button.Resources>
+                        </Button>
                         <CheckBox x:Name="CheckBoxHelp"
                                   Content="Показывать подсказки"
                                   HorizontalAlignment="Center"
