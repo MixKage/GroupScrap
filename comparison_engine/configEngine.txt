@@ -1,0 +1,5 @@
+groupeList>"C:\Users\shish\Documents\code\Ñ++\comparison_engine\comparison_engine\comparison_engine\groupList.txt"
+generalList>"C:\Users\shish\Documents\code\Ñ++\comparison_engine\comparison_engine\comparison_engine\generalList.txt"
+outputList>
+addList>
+max_difference>
