@@ -38,6 +38,7 @@ namespace GroupScrapApp.MVVM.View
             {
                 if (s.ReadLine() == null)
                 {
+                    //Отошёл он
                     err += DateTime.Now.ToString("HH:mm:ss") + " : " + "ERR, EMPTY FILE" + Environment.NewLine;
                     Debug.WriteLine("ERR, EMPTY FILE");
                     Dispatcher.Invoke((() =>
@@ -149,7 +150,7 @@ namespace GroupScrapApp.MVVM.View
             ICell cell = row.CreateCell(0);
             cell.SetCellValue("ФИО");
             cell = row.CreateCell(1);
-            cell.SetCellValue(DateTime.Now.ToString("dd:MM"));
+            cell.SetCellValue(DateTime.Now.ToString("dd.MM"));
 
             int index = 0;
             List<string> outputList = new List<string>();
