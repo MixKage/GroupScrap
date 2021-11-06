@@ -30,7 +30,7 @@ namespace GroupScrapApp.MVVM.View
             InitializeComponent();
         }
 
-        private void StartScrabPeople(object uri)
+        private void StartScrabPeople(object uri, object isExcel)
         {
             string uriText = (string)uri;
             string err = "";
@@ -134,11 +134,14 @@ namespace GroupScrapApp.MVVM.View
                         sw.Write(err);
                     }
                 }
-                CreateExcel();
+                if ((bool)isExcel)
+                    CreateExcel();
+                else
+                    Process.Start("outputList.txt");
                 Dispatcher.Invoke(() =>
-                {
-                    dialogHome.IsOpen = false;
-                });
+                    {
+                        dialogHome.IsOpen = false;
+                    });
             }
         }
 
@@ -185,18 +188,28 @@ namespace GroupScrapApp.MVVM.View
                 textBlockDialog.Text = "Поле с ссылкой путое!";
             else
                 textBlockDialog.Text = "Если Chrome завис - нажмите 'Ctrl +'";
+            bool isExcel = true;
             try
             {
                 using (FileStream fs = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write)) { }
+            }
+            catch
+            {
+                isExcel = false;
+                textBlockDialog.Text = "Если Chrome завис - нажмите 'Ctrl +'\nExcel открыт и не даёт открыть файл Output.xlsx на запись, будет открыт .txt";
+            }
+            try
+            {
                 Task.Factory.StartNew(() =>
                 {
-                    StartScrabPeople(s);
+                    StartScrabPeople(s, isExcel);
                 });
             }
             catch
             {
-                textBlockDialog.Text = "Excel открыт и не даёт открыть файл Output.xlsx на запись!";
+                Debug.WriteLine("ERR, NewThread");
             }
+
             dialogHome.IsOpen = true;
         }
 

@@ -134,7 +134,7 @@
                                   Click="CheckBoxHelp_Click" />
                     </StackPanel>
                 </ScrollViewer>
-                <TextBlock Text="Version 1.0"
+                <TextBlock Text="Version 1.1"
                            Foreground="Wheat"
                            HorizontalAlignment="Right"
                            VerticalAlignment="Bottom"
