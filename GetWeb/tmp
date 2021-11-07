@@ -1,0 +1,797 @@
+<html class="koHtml modal-open"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#000000"><link rel="manifest" href="/manifest.json"><title>5884. Практическое занятие 26.10 БАСО-04,05-19 - Webinar</title><script id="bpmTracking" async="" src="https://webtracking-v01.bpmonline.com/Src/tracking_bTOVPcCqCA7tmyCtLTwsrNC1kKm5JVAQMlX3CCVm.js"></script><script async="" crossorigin="anonymous" src="https://edge.fullstory.com/s/fs.js"></script><script type="text/javascript" async="" src="https://widget.intercom.io/widget/eb4dv2rj"></script><script type="text/javascript" async="" src="//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"></script><script type="text/javascript" async="" src="https://cdn.wootric.com/wootric-sdk.js" id="wootricScript"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script><script type="text/javascript" async="" id="topmailru-code" src="https://top-fwz1.mail.ru/js/code.js"></script><script src="https://connect.facebook.net/signals/config/522027568307756?v=2.9.47&amp;r=stable" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NVJGZ5"></script><script type="text/javascript" src="/config.js"></script><script type="text/javascript" src="/analytics.js"></script><script defer="defer" src="/static/js/main.2a5e3f49.js"></script><link href="/static/css/main.98f94dd1.css" rel="stylesheet"><style type="text/css">.PieChart-module__root___2 {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 840px) {
+  .PieChart-module__root___2 {
+    flex-direction: column;
+  }
+}
+.PieChart-module__chartContainer___2 {
+  position: relative;
+}
+.PieChart-module__chartContainer___2 > canvas {
+  display: block;
+}
+
+.PieChart-module__label___2 {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  padding: 0 30px;
+  transform: translateY(-50%);
+  text-align: center;
+}
+.PieChart-module__label___2 h1 {
+  font-size: 48px;
+  line-height: 50px;
+  font-weight: 100;
+}
+
+.PieChart-module__labelText___3 {
+  word-wrap: break-word;
+  max-height: 50px;
+  overflow: hidden;
+}
+.PieChart-module__labelText___3 > a {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.PieChart-module__legend___B {
+  margin-left: 35px;
+}
+.PieChart-module__legend___B h3 {
+  font-size: 18px;
+  font-weight: 100;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 840px) {
+  .PieChart-module__legend___B {
+    margin: 25px 0 0 0;
+  }
+}
+.PieChart-module__legendItem___3 {
+  display: flex;
+  align-items: center;
+}
+.PieChart-module__legendItem___3 + .PieChart-module__legendItem___3 {
+  margin-top: 10px;
+}
+
+.PieChart-module__legendItemData___3 {
+  flex-shrink: 0;
+  width: 35px;
+  margin-right: 10px;
+}</style><style type="text/css">.TestResultsView-module__table___2 {
+  width: 100%;
+  font-size: inherit;
+  font-family: inherit;
+  color: black;
+}
+.TestResultsView-module__table___2 .TestResultsView-module__name___1 {
+  display: flex;
+  align-items: center;
+}
+.TestResultsView-module__table___2 .TestResultsView-module__avatar___1 {
+  margin-right: 16px;
+  width: 40px;
+  height: 40px;
+  background-color: #e3e3e3;
+  border-radius: 50%;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.TestResultsView-module__table___2 th {
+  padding: 15px 20px;
+  text-align: left;
+  font-weight: 400;
+  color: #919191;
+  border-bottom: 1px solid #ccc;
+}
+.TestResultsView-module__table___2 td {
+  padding: 15px 20px;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.TestResultsView-module__table___2 .TestResultsView-module__clickable___1 {
+  cursor: pointer;
+}</style><style type="text/css">.VotingResultsView-module__chart___2 + .VotingResultsView-module__chart___2 {
+  margin-top: 40px;
+}
+
+.VotingResultsView-module__preview___3 {
+  position: absolute;
+  width: 170px;
+  height: 100px;
+  z-index: 10000;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}</style><style data-jss="" data-meta="MuiCssBaseline">
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+strong, b {
+  font-weight: 700;
+}
+body {
+  color: rgba(0, 0, 0, 0.87);
+  margin: 0;
+  font-size: 0.875rem;
+  font-family: AktivGrotesk, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  background-color: #fafafa;
+}
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+body::backdrop {
+  background-color: #fafafa;
+}
+</style><link rel="shortcut icon" href="/images/favicon-32x32.ico" type="image/x-icon"><link rel="shortcut icon" href="/images/favicon-16x16.png" type="image/png"><link rel="icon" href="/images/favicon-16x16.png" type="image/png" sizes="16x16"><link rel="icon" href="/images/favicon-32x32.png" type="image/png" sizes="32x32"><link rel="icon" href="/images/favicon-96x96.png" type="image/png" sizes="96x96"><link rel="apple-touch-icon" href="/images/apple-touch-icon-57x57.png" type="image/png" sizes="57x57"><link rel="apple-touch-icon" href="/images/apple-touch-icon-60x60.png" type="image/png" sizes="60x60"><link rel="apple-touch-icon" href="/images/apple-touch-icon-72x72.png" type="image/png" sizes="72x72"><link rel="apple-touch-icon" href="/images/apple-touch-icon-76x76.png" type="image/png" sizes="76x76"><link rel="apple-touch-icon" href="/images/apple-touch-icon-114x114.png" type="image/png" sizes="114x114"><link rel="apple-touch-icon" href="/images/apple-touch-icon-120x120.png" type="image/png" sizes="120x120"><link rel="apple-touch-icon" href="/images/apple-touch-icon-144x144.png" type="image/png" sizes="144x144"><link rel="apple-touch-icon" href="/images/apple-touch-icon-152x152.png" type="image/png" sizes="152x152"><link rel="apple-touch-icon" href="/images/apple-touch-icon-180x180.png" type="image/png" sizes="180x180"><link rel="stylesheet" type="text/css" href="/static/css/309.fa4b062f.chunk.css"><link rel="stylesheet" type="text/css" href="/static/css/371.3b8dbfbf.chunk.css"></head><body data-bind="css:{
+    'with-brand': brandingStyles(),
+    'offset': bannerOpened(),
+    'no-scroll': router.noScrollPage(),
+    'without-min-width': router.currentPage() === 'onboarding-start'
+}" class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" style="display: block; padding-right: 15px;"><noscript>You need to enable JavaScript to run this app.</noscript><div id="root" class="reactRoot rootHidden"><div class="Banners_root__3CbxS"></div></div>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","522027568307756");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=522027568307756&amp;ev=PageView&amp;noscript=1"></noscript>
+
+<script type="text/javascript" id="">(window.Image?new Image:document.createElement("img")).src=location.protocol+"//vk.com/rtrg?r\x3dg2*Y3JLXxBaqvo2QRv9H8kjf029CPLp1IL9aVWevVyAluqAE/D4/fpZDRG8MovmsfK2D*RLfmHNN*NLO/4Nucu4TNRsUxgvn4lkk*SRMBKgiTCH4Zx12yv0r3w9tUyjVLPqlD3zW8ONwRRDK13XCenvkEphywWArmig1Q3LrqXY-\x26pixel_id\x3d1000027577";</script>
+<script type="text/javascript" id="">var _tmr=window._tmr||(window._tmr=[]);_tmr.push({id:"2823548",type:"pageView",start:(new Date).getTime()});(function(b,d,a){if(!b.getElementById(a)){var c=b.createElement("script");c.type="text/javascript";c.async=!0;c.id=a;c.src=("https:"==b.location.protocol?"https:":"http:")+"//top-fwz1.mail.ru/js/code.js";a=function(){var a=b.getElementsByTagName("script")[0];a.parentNode.insertBefore(c,a)};"[object Opera]"==d.opera?b.addEventListener("DOMContentLoaded",a,!1):a()}})(document,window,"topmailru-code");</script><noscript><div style="position:absolute;left:-10000px;">
+<img src="//top-fwz1.mail.ru/counter?id=2823548;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru">
+</div></noscript>
+
+<script type="text/javascript" id="">(function(d,b,a){(b[a]=b[a]||[]).push(function(){try{b.yaCounter38578180=new Ya.Metrika({id:38578180,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0})}catch(f){}});var e=d.getElementsByTagName("script")[0],c=d.createElement("script");a=function(){e.parentNode.insertBefore(c,e)};c.type="text/javascript";c.async=!0;c.src="https://mc.yandex.ru/metrika/watch.js";"[object Opera]"==b.opera?d.addEventListener("DOMContentLoaded",a,!1):a()})(document,window,"yandex_metrika_callbacks");</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/38578180" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+<script type="text/javascript" id="">(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b;a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};a[b].l=1*new Date;c=e.createElement(f);d=e.getElementsByTagName(f)[0];c.async=1;c.src=g;d.parentNode.insertBefore(c,d)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create","UA-6354589-1","auto");ga("send","pageview");</script><div style="display: none; visibility: hidden;"><script>window._nQc="89249125";</script>
+<script async="null" src="https://serve.albacross.com/track.js"></script></div><iframe id="intercom-frame" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important; pointer-events: none;" aria-hidden="true" tabindex="-1" title="Intercom"></iframe><div id="koContainer" class="koRoot">  <!-- ko if: brandingStyles() && !router.ignoreBrandingRoute() --><!-- /ko -->
+  <!-- ko if: !router.errorPage() && router.routeAvailable() -->
+
+  <!-- ko if: router.notPageForHidePanel() --><!-- /ko -->
+
+  <!-- ko component: {
+        name: 'community-popup',
+        params: {}
+      } --><!-- ko if: visible() && router.notPageForHidePanel --><!-- /ko --><!-- /ko -->
+
+  <!-- ko if: !!router.currentTopBar() --><!-- /ko -->
+  <!-- ko if: !!router.currentPage() -->
+  <!-- ko component: {
+              name: router.currentPage,
+              params: {}
+          } --><!-- ko if: rec() && !isReserved() && !filePage() && !mobilePage() -->
+	<div class="enter-page">
+            <style type="text/css" data-bind="text: mobileBackgroundStyle"></style>
+
+            <!-- ko component: {
+                name: 'top-clean-signin',
+                params: {
+                    rec: rec,
+                    logoUrl: isUser() ? '/' : 'https://webinar.ru'
+                }
+            } --><div class="topbar topbar-transparent">
+    <div class="container-fluid">
+        <div class="pull-right" data-bind="visible: !withoutSBtn()" style="display: none;">
+            <a href="#" class="signin-social-link signin-social-link_fb" data-bind="click: shareLink.bind({},'fb')"></a>
+            <a href="#" class="signin-social-link signin-social-link_vk" data-bind="click: shareLink.bind({},'vk')"></a>
+        </div>
+        <div class="pull-right">
+            <div class="select-lang" data-bind="style: {'margin-right': withoutSBtn() ? '0' : undefined}" style="margin-right: 0px;">
+                <div class="select-lang-current"><span class="select-lang-current-title" data-bind="text:langs.titleActiveLang">RU</span><span class="select-lang-arrow"></span></div>
+                <ul class="select-lang-dropdown" data-bind="foreach: langs.locales">
+                    <li data-bind="click: $component.switchLang, css:{active:$data.key == $parent.langs.locale().key}" class="active"><a href="#" class="select-lang-link" data-bind="text: $data.title">RU</a></li>
+                
+                    <li data-bind="click: $component.switchLang, css:{active:$data.key == $parent.langs.locale().key}"><a href="#" class="select-lang-link" data-bind="text: $data.title">ENG</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- ko ifnot: branding() && branding().landingLogoImage --><!-- /ko -->
+        <!-- ko if: branding() && branding().landingLogoImage -->
+        <a class="brand-logo" data-bind="attr: {href: branding().interfaceLogoLink || '#'}" href="#">
+            <!-- ko if: landingLogoFormat() == 'svg' --><!-- /ko -->
+
+            <!-- ko ifnot: landingLogoFormat() == 'svg' -->
+                <img src="https://events-storage.webinar.ru/api-storage/200x50/files/webinar/2020/09/02/31d4f85fa5cde3c4fa350f698cacf08f5c762ebdb0593fc6e8b0abcbd49.png?s=1599034338" alt="" data-bind="attr: {src: branding().landingLogoImage.thumbnails['200x50'] || branding().landingLogoImage.thumbnails['224x199']}">
+            <!-- /ko -->
+        </a>
+        <!-- /ko -->
+    </div>
+</div><!-- /ko -->
+
+		<div class="page">
+			<!-- ko if: rec().image.getURL() -->
+				<!-- ko if: mobileablePage() --><!-- /ko -->
+
+				<!-- ko ifnot: mobileablePage() -->
+					<div class="page-background" data-bind="backstratch: { url: rec().image.getURL() }" style="position: absolute; z-index: 0; background: none;"><div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 896px; width: 930px; z-index: -999998; position: absolute;"><img src="https://events.webinar.ru/images/event-default.png" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1592.89px; height: 896px; max-height: none; max-width: none; z-index: -999999; left: -331.444px; top: 0px;"></div></div>
+				<!-- /ko -->
+			<!-- /ko -->
+			<div data-bind="attr: {'data-testId': utils.createTestId('KoContainer', 'EnterPage', 'Page', 'Container')}" class="container" data-testid="KoContainer.EnterPage.Page.Container">
+				<div class="main-column">
+                    <!-- ko ifnot: rec().webinar.isStopped() -->
+                        <h2 style="display: inline-block; margin-right: 20px;">
+							<!-- ko if: rec().rule.description() != '' --><!-- /ko -->
+							<!-- ko ifnot: rec().rule.description() != '' -->
+								<span data-bind="text: rec().webinar.prepare.startsAt().formatString('d mmm HH:MM tzp')">25 октября 14:45 Москва</span><br>
+
+							<!-- /ko -->
+                        </h2>
+                        <a href="https://events.webinar.ru/api/event/9380153/vcalendar" style="white-space: nowrap;" class="epsilon" data-bind="attr:{href: rec().webinar.prepare.icsURL()}">
+                            <i style="margin-right: 10px;" class="icon icon-calendar-xs"></i><span data-bind="translation: 'common_to_calendar'">Добавить в календарь</span>
+                        </a>
+                        <!-- ko if: rec().lectors.list() && rec().lectors.list().length > 0 --><!-- /ko -->
+                    <!-- /ko -->
+
+                    <!-- ko if: rec().webinar.isStopped() --><!-- /ko -->
+                    <h1 data-bind="text: rec().name.value()">5884. Практическое занятие 26.10 БАСО-04,05-19</h1>
+                    <p class="event-description" style="white-space: pre-wrap" data-bind="clickableUrl: rec().description.value()"><span></span></p>
+                    <!-- ko if: rec().hasAnnounceFilesVideo() || rec().hasAnnounceFilesList() --><!-- /ko -->
+				</div>
+
+				<div class="extra-column">
+					<!-- ko if: rec().webinar.isStopped() && recordParams() && recordParams().isViewable && !isMobileDevice --><!-- /ko -->
+
+					<!-- ko ifnot: rec().webinar.isStopped() -->
+						<ul class="event-list-properties">
+							<!-- ko if: (rec().access.value() > 3 && rec().cost.value() > 0 && (!user() || !user().pData || user().pData && user().pData.registerStatus == 'INVITED' && user().pData.paymentStatus != 'MANUAL_PAID' && user().pData.role === 'GUEST')) --><!-- /ko -->
+
+							<!-- ko if: rec().access.value() <= 3 ||
+									   (rec().access.value() > 3 && rec().cost.value() == 0 && (!user() || !user().pData || user().pData && user().pData.registerStatus == 'INVITED')) --><!-- /ko -->
+
+							<!-- ko if: (rec().access.value() > 3 && user() &&
+										 user().pData && user().pData.registerStatus != 'INVITED' &&
+										(rec().cost.value() == 0 || rec().cost.value() > 0)) -->
+								<li>
+									<span data-bind="translation: 'event_reg_has_been_passed'">Вы зарегистрированы</span><br>
+
+									<!-- ko if: rec().cost.value() > 0 && user().pData.paymentStatus == 'NOT_PAID' && user().pData.role === 'GUEST' --><!-- /ko -->
+
+									<!-- ko if:  rec().cost.value() == 0 || (rec().cost.value() > 0 && (user().pData.paymentStatus != 'NOT_PAID' || user().pData.role !== 'GUEST')) -->
+
+										<!-- ko if: (enterButton() === 'BEFORE' || enterButton() === 'REGISTER') && !rec().webinar.isStarted() --><!-- /ko -->
+
+                                        <!-- ko if: rec().webinar.isStarted()  -->
+                                            <span style="font-size: 26px; font-weight: bold;" data-bind="text: eventStartedText">Вебинар уже идет</span>
+                                        <!-- /ko -->
+
+									<!-- /ko -->
+								</li>
+							<!-- /ko  -->
+
+							<li>
+								<span data-bind="translation: 'event_begin'">Начало</span>:
+								<span data-bind="text: rec().webinar.prepare.startsAt().formatString('d')">25</span>
+								<span data-bind="translation: 'date_m' + rec().webinar.prepare.startsAt().formatString('m') + 'f2'">окт.</span>
+								<span data-bind="text: rec().webinar.prepare.startsAt().formatString('yyyy')">2021</span>
+							</li>
+							<li data-bind="visible: !!rec().duration.value()" style="display: none;">
+								<span data-bind="translation: 'edit_event_duration_2'">Длительность</span>: <span data-bind="trueTime: rec().duration.getArray()">Другая</span>
+							</li>
+
+                            <li data-bind="visible: !!rec().webinar.data.getField('hasTranslators')" style="display: none;">
+                                <span data-bind="translation: 'event_languages'">Языки трансляции</span>:
+                                <!-- ko foreach: rec().webinar.data.getField('languages') --><!-- /ko -->
+                            </li>
+							<li data-bind="visible: rec().cost.value() > 0 &amp;&amp; user() &amp;&amp; user().pData &amp;&amp; user().pData.registerStatus != 'INVITED' &amp;&amp; user().pData.paymentStatus !== 'MANUAL_PAID' &amp;&amp; user().pData.role === 'GUEST'" style="display: none;">
+								<span data-bind="translation: 'edit_event_price2'">Стоимость</span>: <span data-bind="text: rec().cost.value() +  ' ₽'">0 ₽</span>
+								<span data-bind="visible: user() &amp;&amp; user().pData &amp;&amp; user().pData.paymentStatus != 'NOT_PAID', translation: 'event_has_been_paid'" style="display: none;">(оплачено)</span>
+							</li>
+
+							<li data-bind="visible: rec().cost.value() > 0 &amp;&amp; showRemainingPlaces()" style="display: none;">
+								<span data-bind="translation: 'event_num_remain_places'">Осталось</span>: <span data-bind="text: remainPlacesDesc">Мест нет</span>
+							</li>
+
+						</ul>
+						<!-- ko if: !rec().isEventRegAllowed.value() && !rec().webinar.isSingle() --><!-- /ko -->
+						<div class="event-btns" data-bind="template: 'btn_enter'">
+	<!-- ko if: ($component.enterButton() === 'LOGIN_CONFLICT') --><!-- /ko -->
+
+	<!-- ko if: ($component.enterButton() === 'SSO_AUTH') --><!-- /ko -->
+
+	<!-- ko if: ($component.enterButton() === 'ALREADY_ONLINE') --><!-- /ko -->
+
+	<!-- ko if: ($component.enterButton() === 'PAY') --><!-- /ko -->
+	<!-- ko if: ($component.enterButton() === 'REQUEST_ADDITIONAL_PLACE') --><!-- /ko -->
+    <!-- ko if: ($component.enterButton() === 'REGISTER') --><!-- /ko -->
+    <!-- ko if: ($component.enterButton() === 'ENTER') -->
+        <!-- ko if: $component.tokenBelongsToAnotherUser() --><!-- /ko -->
+        <!-- ko if: !$component.tokenBelongsToAnotherUser() -->
+            <a href="#" class="btn btn-important" data-bind="openModal: {
+                    'name': 'modal-enter-to-event',
+                    'params': {
+                        wbnr: $component.rec().webinar,
+                        userByToken: $component.user,
+                        token: $component.newToken() ? $component.newToken : $component.infoURL.token,
+                        branding: branding,
+                        passWithoutToken: true,
+                        counters: counters,
+                        showAgreement: $component.eventFeatures().policyOpenEntrance &amp;&amp; $component.rec().webinar.data.getField('access') < 4
+
+                    }
+                }, translation: 'signin_action_f1'">Подключиться</a>
+        <!-- /ko -->
+    <!-- /ko -->
+
+	<!-- ko if: !hideSendQuestionBtn() -->
+    <a href="#" class="text-btn event-question-btn" data-bind="
+        openModal: {
+            'name': 'modal-enter-send-question',
+            'params': {eventId: $component.rec().webinar.data.eventId()}
+        }
+    ">
+		<i class="icon-custom-question"></i>
+		<span class="event-question-text" data-bind="translation: 'event_question_lector'">Задать вопрос ведущему</span>
+	</a>
+	<!-- /ko -->
+    <!-- ko if: isWebrtc() -->
+        <a href="/support/test-webrtc" target="_blank" class="text-btn event-test-btn">
+            <i class="icon-custom-info-filled"></i>
+            <span class="event-question-text" data-bind="translation: 'support_system_test_landing'">Пройти тест системы</span>
+        </a>
+    <!-- /ko -->
+    <!-- ko if: !isWebrtc() --><!-- /ko -->
+</div>
+					<!-- /ko -->
+					<!-- ko if: showMessengersSection --><!-- /ko -->
+			    </div>
+			</div>
+		</div>
+
+		<!-- ko if: rec().hasAnnounceFilesVideo() || rec().hasAnnounceFilesList() --><!-- /ko -->
+		<div class="page-footer">
+				<div class="container">
+					<div class="extra-column" data-bind="visible: rec().hasAnnounceFilesVideo() || rec().hasAnnounceFilesList()" style="display: none;">
+						<!-- ko if: rec().webinar.isStopped() && recordParams() && recordParams().isViewable --><!-- /ko -->
+						<!-- ko ifnot: rec().webinar.isStopped() -->
+							<!-- ko if: (enterButton() === 'BEFORE' || enterButton() === 'REGISTER') && !rec().webinar.isStarted() --><!-- /ko -->
+								<div class="event-btns" data-bind="template: 'btn_enter'">
+	<!-- ko if: ($component.enterButton() === 'LOGIN_CONFLICT') --><!-- /ko -->
+
+	<!-- ko if: ($component.enterButton() === 'SSO_AUTH') --><!-- /ko -->
+
+	<!-- ko if: ($component.enterButton() === 'ALREADY_ONLINE') --><!-- /ko -->
+
+	<!-- ko if: ($component.enterButton() === 'PAY') --><!-- /ko -->
+	<!-- ko if: ($component.enterButton() === 'REQUEST_ADDITIONAL_PLACE') --><!-- /ko -->
+    <!-- ko if: ($component.enterButton() === 'REGISTER') --><!-- /ko -->
+    <!-- ko if: ($component.enterButton() === 'ENTER') -->
+        <!-- ko if: $component.tokenBelongsToAnotherUser() --><!-- /ko -->
+        <!-- ko if: !$component.tokenBelongsToAnotherUser() -->
+            <a href="#" class="btn btn-important" data-bind="openModal: {
+                    'name': 'modal-enter-to-event',
+                    'params': {
+                        wbnr: $component.rec().webinar,
+                        userByToken: $component.user,
+                        token: $component.newToken() ? $component.newToken : $component.infoURL.token,
+                        branding: branding,
+                        passWithoutToken: true,
+                        counters: counters,
+                        showAgreement: $component.eventFeatures().policyOpenEntrance &amp;&amp; $component.rec().webinar.data.getField('access') < 4
+
+                    }
+                }, translation: 'signin_action_f1'">Подключиться</a>
+        <!-- /ko -->
+    <!-- /ko -->
+
+	<!-- ko if: !hideSendQuestionBtn() -->
+    <a href="#" class="text-btn event-question-btn" data-bind="
+        openModal: {
+            'name': 'modal-enter-send-question',
+            'params': {eventId: $component.rec().webinar.data.eventId()}
+        }
+    ">
+		<i class="icon-custom-question"></i>
+		<span class="event-question-text" data-bind="translation: 'event_question_lector'">Задать вопрос ведущему</span>
+	</a>
+	<!-- /ko -->
+    <!-- ko if: isWebrtc() -->
+        <a href="/support/test-webrtc" target="_blank" class="text-btn event-test-btn">
+            <i class="icon-custom-info-filled"></i>
+            <span class="event-question-text" data-bind="translation: 'support_system_test_landing'">Пройти тест системы</span>
+        </a>
+    <!-- /ko -->
+    <!-- ko if: !isWebrtc() --><!-- /ko -->
+</div>
+						<!-- /ko -->
+					</div>
+					<div class="main-column">
+						<div style="margin-right: 60px;" class="pull-left">
+							<p data-bind="translation: {key: 'base_footer_copyright_1', params: {
+								currentYear: (new Date()).getFullYear()
+							}}">© 2008-2021, Webinar</p>
+							<p style="margin: 10px 0 20px;" data-bind="translation: 'base_footer_copyright_2'">Все права защищены</p>
+						</div>
+						<div class="pull-left">
+							<ul>
+								<!-- ko if: !hideSendQuestionBtn() -->
+								<li>
+									<a href="#" data-bind="translation: 'base_footer_question', openModal: {
+										'name': 'modal-enter-send-question',
+										'params': {eventId: $component.rec().webinar.data.eventId()}
+									}">Задать вопрос</a>
+								</li>
+								<!-- /ko -->
+								<!--<li><a href="#" data-bind="translation: 'base_footer_master_media'"></a></li>-->
+								<!--<li><a href="#" data-bind="translation: 'base_footer_records'"></a></li>-->
+								<li><a href="http://webinar.ru/legal/privacy-policy/" target="_blank" data-bind="translation: 'base_footer_privacy'">Политика конфиденциальности</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+<!-- /ko -->
+
+<!-- ko if: filePage() && rec() && brandingStyles() && !showMobileOverlay() --><!-- /ko -->
+
+<!-- ko if: mobilePage() && complete() && rec() --><!-- /ko -->
+
+<!-- ko if: showMobileOverlay() --><!-- /ko -->
+
+<script type="text/html" id="btn_enter">
+	<!-- ko if: ($component.enterButton() === 'LOGIN_CONFLICT') -->
+		<!-- ko if: rec().access.value() <= 3 -->
+			<a href="#" class="btn btn-important" data-bind="openModal: {
+						'name': 'modal-action',
+						'params': {
+							title: l10n.getTranslation('reenter_title'),
+							text: l10n.getTranslation('reenter_desc'),
+							actions: [
+								{
+									'text': l10n.getTranslation('common_continue'),
+									'class': 'btn btn-important',
+									'id': 'reenter'
+								},
+								{
+									'text': l10n.getTranslation('common_cancel'),
+									'class': 'btn',
+									'id': 'cancel'
+								}
+							],
+							selectVariant: function(result) {
+								switch (result.id) {
+									case 'reenter':
+										modals.closeAll();
+										reenter();
+										break;
+									case 'cancel':
+										modals.closeAll();
+										break;
+								}
+							}
+						}
+					}, translation: 'reenter'"></a>
+		<!-- /ko -->
+
+		<!-- ko if: rec().access.value() > 3 -->
+			<a href="#" class="btn btn-important"
+				data-bind="
+					openModal: {
+						'name': 'modal-action',
+						'params': {
+							title: l10n.getTranslation('register_to_another_email'),
+							text: l10n.getTranslation('register_to_another_email_desc'),
+							actions: [
+								{
+									'text': l10n.getTranslation('common_continue'),
+									'class': 'btn btn-important',
+									'id': 'register'
+								}
+							],
+							selectVariant: function(result) {
+								switch (result.id) {
+									case 'register':
+										register();
+										break;
+								}
+							}
+						}
+					}, translation: $component.rec().cost.value() > 0 && $component.participationsCount() <= 0 && (!$component.user() || $component.user() && $component.user.pData && $component.user.pData.paymentStatus == 'NOT_PAID')  ? 'event_request_additional_participant_place' : 'event_to_reg'
+
+				">
+			</a>
+		<!-- /ko -->
+        <!-- ko if: $component.user() -->
+            <br/>
+            <a href="#" class="btn"
+            data-bind="openModal: {
+                    'name': 'modal-action',
+                    'params': {
+                        title: l10n.getTranslation('finish_all_sessions'),
+                        text: l10n.getTranslation('finish_all_sessions_desc', {email: $component.user() && $component.user().email}),
+                        actions: [
+                            {
+                                'text': l10n.getTranslation('finish_sessions'),
+                                'class': 'btn btn-danger',
+                                'id': 'reset_all_sessions'
+                            },
+                            {
+                                'text': l10n.getTranslation('common_cancel'),
+                                'class': 'btn',
+                                'id': 'cancel'
+                            }
+                        ],
+                        selectVariant: function(result) {
+                            switch (result.id) {
+                                case 'reset_all_sessions':
+                                    renewsession();
+                                    break;
+                                case 'cancel':
+                                    modals.closeAll();
+                                    break;
+                            }
+                        }
+                    }
+                }, translation: 'finish_all_sessions'">
+            </a>
+		<!-- /ko -->
+	<!-- /ko -->
+
+	<!-- ko if: ($component.enterButton() === 'SSO_AUTH') -->
+	<a href="#" class="btn btn-important" data-bind="openModal: {
+		'name': 'modal-enter-sso-auth',
+		'params': {
+			eventId: $component.infoURL.eventId,
+			ssoUrl: $component.__sso.getSSOUrl(),
+		}
+	}, translation: 'signin_action_f2'"
+	></a>
+	<!-- /ko -->
+
+	<!-- ko if: ($component.enterButton() === 'ALREADY_ONLINE') -->
+	<a href="#" class="btn btn-important" data-bind="click:alertAlreadyOnline.bind($component, $component.__webinar, !!(user() && user().pData)), translation: 'signin_action_f1'"></a>
+	<!-- /ko -->
+
+	<!-- ko if: ($component.enterButton() === 'PAY') -->
+	<a href="#" class="btn btn-important"
+	    data-bind="openModal: {
+            'name': 'modal-enter-register-form',
+            'params': {
+                wbnr: $component.rec().webinar,
+                registerToEvent: $component.registerToEvent,
+                alertMaxUsers: $component.alertMaxUsers,
+                user: $component.user,
+                token: $component.infoURL.token,
+                newToken: $component.newToken,
+                eventId: $component.infoURL.eventId,
+                additionalValuesForRegUser: $component.additionalValuesForRegUser,
+                shouldPay: $component.rec().cost.value() > 0
+                       && !($component.user() && $component.user().pData && ($component.user().pData.paymentStatus === 'MANUAL_PAID' || $component.user().pData.paymentStatus === 'PAID' || user().pData.role !== 'GUEST')),
+				counters: counters,
+				isMeeting: isMeeting,
+				isTraining: isTraining,
+				tokenBelongsToAnotherUser: tokenBelongsToAnotherUser,
+                isAndroid: isAndroid,
+                isIOS: isIOS,
+                isWebrtcPromise: isWebrtcPromise,
+                agreementCheckboxes: $component.eventFeatures().registrationCheckbox
+            }
+        }, translation: 'event_to_pay'"></a>
+	<!-- /ko -->
+	<!-- ko if: ($component.enterButton() === 'REQUEST_ADDITIONAL_PLACE') -->
+	<a href="#" class="btn btn-important"  data-bind="openModal: {
+            'name': 'modal-enter-register-form',
+            'params': {
+                wbnr: $component.rec().webinar,
+                user: $component.user,
+                registerToEvent: $component.registerToEvent,
+                token: $component.infoURL.token,
+                newToken: $component.newToken,
+                eventId: $component.infoURL.eventId,
+                alertMaxUsers: $component.alertMaxUsers,
+                requestForPlaces: true,
+				additionalValuesForRegUser: $component.additionalValuesForRegUser,
+                counters: counters,
+				isMeeting: isMeeting,
+				isTraining: isTraining,
+				tokenBelongsToAnotherUser: tokenBelongsToAnotherUser,
+                isAndroid: isAndroid,
+                isIOS: isIOS,
+                isWebrtcPromise: isWebrtcPromise,
+                agreementCheckboxes: $component.eventFeatures().registrationCheckbox
+            }
+        }, translation: 'event_request_additional_participant_place'"></a>
+	<!-- /ko -->
+    <!-- ko if: ($component.enterButton() === 'REGISTER') -->
+    <a href="#" class="btn btn-important"
+        data-bind="openModal: {
+            'name': 'modal-enter-register-form',
+            'params': {
+            	callRegForm: callRegForm,
+                wbnr: $component.rec().webinar,
+                user: $component.user,
+                registerToEvent: $component.registerToEvent,
+                token: $component.infoURL.token,
+				alertMaxUsers: $component.alertMaxUsers,
+                newToken: $component.newToken,
+                eventId: $component.infoURL.eventId,
+                counters: $component.counters,
+                additionalValuesForRegUser: $component.additionalValuesForRegUser,
+				successAction: $component.runEnter.bind($component, $component.rec().webinar),
+                shouldPay: $component.rec().cost.value() > 0
+                		&& !($component.user() && $component.user().pData && ($component.user().pData.paymentStatus === 'MANUAL_PAID' || $component.user().pData.paymentStatus === 'PAID' || user().pData.role !== 'GUEST')),
+                requestForPlaces: $component.rec().cost.value() > 0 && $component.participationsCount() <= 0 && (!$component.user() || $component.user() && $component.user().pData && $component.user().pData.paymentStatus == 'NOT_PAID' && user().pData.role === 'GUEST'),
+				isMeeting: isMeeting,
+				isTraining: isTraining,
+                isModalPasswordRequiredWasCalled: isModalPasswordRequiredWasCalled,
+                tokenBelongsToAnotherUser: tokenBelongsToAnotherUser,
+                isAndroid: isAndroid,
+                isIOS: isIOS,
+                isWebrtcPromise: isWebrtcPromise,
+                agreementCheckboxes: $component.eventFeatures().registrationCheckbox
+            }
+        }, translation: $component.rec().cost.value() > 0 && $component.participationsCount() <= 0 && (!$component.user() || $component.user() && $component.user.pData && $component.user.pData.paymentStatus == 'NOT_PAID' && user().pData.role === 'GUEST')  ? 'event_request_additional_participant_place' : 'event_to_reg'"></a>
+    <!-- /ko -->
+    <!-- ko if: ($component.enterButton() === 'ENTER') -->
+        <!-- ko if: $component.tokenBelongsToAnotherUser() -->
+            <a href="#" class="btn btn-important" data-bind="click: $component.openModalPasswordRequired.bind($component, null), translation: 'signin_action_f1'"></a>
+        <!-- /ko -->
+        <!-- ko if: !$component.tokenBelongsToAnotherUser() -->
+            <a href="#" class="btn btn-important"
+                data-bind="openModal: {
+                    'name': 'modal-enter-to-event',
+                    'params': {
+                        wbnr: $component.rec().webinar,
+                        userByToken: $component.user,
+                        token: $component.newToken() ? $component.newToken : $component.infoURL.token,
+                        branding: branding,
+                        passWithoutToken: true,
+                        counters: counters,
+                        showAgreement: $component.eventFeatures().policyOpenEntrance && $component.rec().webinar.data.getField('access') < 4
+
+                    }
+                }, translation: 'signin_action_f1'"></a>
+        <!-- /ko -->
+    <!-- /ko -->
+
+	<!-- ko if: !hideSendQuestionBtn() -->
+    <a href="#" class="text-btn event-question-btn" data-bind="
+        openModal: {
+            'name': 'modal-enter-send-question',
+            'params': {eventId: $component.rec().webinar.data.eventId()}
+        }
+    ">
+		<i class="icon-custom-question"></i>
+		<span class="event-question-text" data-bind="translation: 'event_question_lector'"></span>
+	</a>
+	<!-- /ko -->
+    <!-- ko if: isWebrtc() -->
+        <a href="/support/test-webrtc" target="_blank" class="text-btn event-test-btn">
+            <i class="icon-custom-info-filled"></i>
+            <span class="event-question-text" data-bind="translation: 'support_system_test_landing'"></span>
+        </a>
+    <!-- /ko -->
+    <!-- ko if: !isWebrtc() -->
+        <a href="#" class="text-btn event-test-btn" data-bind="openModal: {name: 'modal-support-test'}">
+            <i class="icon-custom-info-filled"></i>
+            <span class="event-question-text" data-bind="translation: 'support_system_test_landing'"></span>
+        </a>
+    <!-- /ko -->
+</script>
+
+<style>
+	.koHtml body {
+		min-width: 0;
+	}
+</style>
+
+<!-- ko if: brandingStyles() && brandingStyles().styles() -->
+	<style rel="stylesheet" type="text/css" data-bind="text: brandingStyles().styles">.koRoot .not-found-error .suggestion:hover .btn{background: #9012fe;}.koRoot .wbt2.wbt2-default.success{background-color: #9012fe;}.koRoot .wbt2.wbt2-default.success:hover{background-color: #8601fb;}.koRoot .wbt2.wbt2-default.success:active{background-color: #7901e1;}.koRoot .wbt2.wb-link{color: #9012fe;;}.koRoot .wbt2.wb-link:hover{color: #8601fb;}.koRoot .wbt2.wb-link:active{color: #7901e1;}.koRoot .wbt2.wb-icon.success-icon .icon{color: #9012fe;}.koRoot .wbt2-group.success{background: #9012fe;}.koRoot .wbt2-group .wbt2-default{border-right: solid 1px #7901e1;}.koRoot .wb-add-lector .progress-bar{background: #9012fe;}.koRoot .modal-dialog.modal-event-people .w-last-webinars-item.w-last-webinars-item-selected{background-color: #9012fe;}.koRoot .modal-dialog.modal-event-people .dialog-body-top .select-field .dropdown-menu .active .icon{color: #9012fe;}.koRoot .modal-dialog.modal-files .aside-layout .content .dialog-body-wrapper .dialog-files-droparea{border: 1px #a540fe solid;}.koRoot .modal-dialog.modal-files .dialog-body-top .select-field .dropdown-menu .active .icon{color: #9012fe;}.koRoot .b-tariff .tarif:hover .footer .pull-right a.btn{background: #9012fe;}.koRoot .b-icon-before:before{color: #9012fe;}.koRoot .b-progress-bar .fill{background: #9012fe;}.koRoot .support-test .info-box.failed .info-image{background-color: #ec3939;color: #fff;}.koRoot .support-test .info-box.failed .info-subtitle{color: #ec3939;}.koRoot .support-test .select-field .icon-close{color: #ec3939;}.koRoot .support-test .audio-test .slider-range{background-color: #9a26fe;}.koRoot .support-test .audio-test .slider-handle{background-color: #9a26fe;}.koRoot .w-docs-aside-droparea{border: 1px #9a26fe solid;}.koRoot #onboarding-dropdown ul li a.standart{color: #8601fb !important;}.koRoot #onboarding-dropdown .bg i{color: #8601fb;}.koRoot #onboarding-dropdown .bg .onboarding-progress .progressbar div{background: #8601fb;}.koRoot a,.koRoot input[type="submit"]{color: #8601fb;}.koRoot a:hover,.koRoot input[type="submit"]:hover,.koRoot a:focus,.koRoot input[type="submit"]:focus{color: #7b01e6;}.koRoot a:active,.koRoot input[type="submit"]:active{color: #6e01cd;}.koRoot .icon-star{color: #9a26fe}.koRoot .jq-checkbox.checked,.koRoot .jq-radio.checked,.koRoot .signin-social-link:hover,.koRoot .icon-s-vk:hover,.koRoot .w-btn:hover .icon-minus,.koRoot .w-btn:hover .icon-plus,.koRoot .w-btn:hover .icon-prev-lg,.koRoot .w-btn:hover .icon-next-lg,.koRoot .w-btn:hover .icon-draw,.koRoot .w-btn:hover .icon-text,.koRoot .w-btn:hover .icon-undo,.koRoot .w-btn:hover .icon-screen,.koRoot .w-btn:hover .icon-cursor,.koRoot .icon-volume,.koRoot .ui-resizable-handle,.koRoot .icon-check-line,.koRoot .icon-back,.koRoot .icon-calendar-round:hover,.koRoot .w-btn:hover .icon-move-drawing,.koRoot .w-btn:hover .icon-schreensharing-unfold,.koRoot .w-btn:hover .icon-schreensharing-fold,.koRoot .w-btn:hover .icon-eraser,.koRoot .ui-datepicker td span.ui-state-hover,.koRoot .ui-datepicker td a.ui-state-hover{color: #8601fb;}.koRoot .w-btn:active .icon-minus,.koRoot .w-btn:active .icon-plus,.koRoot .w-btn:active .icon-prev-lg,.koRoot .w-btn:active .icon-next-lg,.koRoot .w-btn:active .icon-draw{color: #7901e1;}.koRoot .icon-check-round.true{color: #8601fb;}.koRoot .ui-slider-vertical .ui-slider-range{background-color: #9a26fe;}.koRoot .w-brush-weight-slider .ui-slider-handle, .koRoot  .w-volume-slider .ui-slider-handle{background-color: #9a26fe;}.koRoot .navigation > a.is-active{background-color: #8601fb;}.koRoot .datepicker-field.is-valid{border-color: #9a26fe;}.koRoot .switch-range{background-color: #5f5f5f;}.koRoot .is-checked .switch-range{background-color: #9a26fe;}.koRoot .input-field-tag.is-valid,.koRoot .tag-valid,.koRoot .tag:not(.tag-error):hover{background-color: #8601fb;}.koRoot .ticket-status.active{color: #8601fb;}.koRoot .active .ticket-status-symbol{background-color: #8601fb;}.koRoot .active .ticket-status-symbol{background-color: #8601fb;}.koRoot .repeat-day.active{background-color: #8601fb;}.koRoot .user-checkbox.checked{background-color: #8601fb;}.koRoot .w-drop:hover{border-color: #8601fb;}.koRoot .folder.dragged-hover{border: 1px solid #9a26fe !important;box-shadow: 0px 0px 0px 1px #9a26fe !important;}.koRoot tr.dragged-hover{border: 2px solid #9a26fe !important;}.koRoot tr.file-active td{background: #9012fe !important;}.koRoot a.folder.active,.koRoot .folder.active{background: #9012fe;color: #FFFFFF;}.koRoot a.file.file-selected,.koRoot .file.file-selected,.koRoot a.folder.file-selected,.koRoot .folder.file-selected{border: 1px solid #9012fe !important;box-shadow: 0px 0px 0px 2px #9012fe !important;}.koRoot .w-aside-drop.active .w-aside-drop-area{border: 2px dashed #8601fb;}.koRoot .folder-crumbs li{color: #8601fb}.koRoot .video-content .video-icon{background-color: #8601fb}.koRoot .w-toolbar-edit .w-frame-edit-tools .w-frame-edit-blocks{border: 2px solid #8601fb;}.koRoot .w-toolbar-edit .w-frame-edit-tools .w-frame-edit-blocks .w-frame-blind.empty-blind{border-left: 2px solid #8601fb;border-right: 2px solid #8601fb;}.koRoot .w-toolbar-edit .w-frame-edit-tools .w-frame-wrapper{border: 2px solid #8601fb;}.koRoot .w-body-test .w-prev-bg .w-prev-slider-zoom,.koRoot .w-body-test-create .w-prev-bg .w-prev-slider-zoom,.koRoot .w-body-i .w-prev-bg .w-prev-slider-zoom{border: 2px solid #8601fb;}.koRoot .w-page-slider.handle-active .ui-slider-range-min{background-color: #8601fb;}.koRoot .w-page-slider.handle-active .ui-state-active{background-color:#8601fb;}.koRoot .volume-dots .volume-dot-wrap .volume-dot{background-color: #8601fb;}.koRoot .ui-datepicker td span.ui-state-active,.koRoot .ui-datepicker td a.ui-state-active{background-color: #8601fb;}.koRoot #select-period .ui-datepicker .date-range-selected > .ui-state-active{background-color: #8601fb;}.koRoot .calendar-type a.is-active{color: #8601fb;}.koRoot .event-edit #w-action-ready{color: #8601fb !important;}.koRoot .event-edit #w-action-ready:hover{color: #7b01e6 !important;}.koRoot .event-edit #w-action-ready:focus{color: #7001d2 !important;}.koRoot .ui-datepicker.datepicker-range .date-range-selected > .ui-state-active{background-color: #8601fb;}.koRoot .w-body-i .w-prev-bg .w-prev-slider-zoom img{border: 2px solid #8601fb;}.koRoot .file-download-btn:hover{color: #8601fb;}.koRoot .file-download-btn:active{color: #7901e1;}.koRoot .icon-green{color: #8601fb !important;}.koRoot .icon-green:hover{color: #7b01e6 !important;}.koRoot .icon-green:active{color: #6e01cd !important;}.koRoot .w-btn:hover .icon-record-cancel{color: #8601fb;}.koRoot .dropdown-menu.onboarding li .icon{color: #8601fb;}.koRoot .dropdown-menu.onboarding .onboarding-progress .progressbar div{background: #8601fb;}.koRoot #onboarding-dropdown ul li a.standart{color: #8601fb !important;}.koRoot #onboarding-dropdown .bg i{color: #8601fb;}.koRoot #onboarding-dropdown .bg .onboarding-progress .progressbar div{background: #8601fb;}.koRoot button.wbt2.in-records.wbt2-default:hover{color: #7b01e6;}.koRoot .wbt2.withIcon.in-records:hover{color: #7b01e6;}.koRoot .text-btn-danger{color: #5f5f5f;}.koRoot .text-btn-danger:hover,.koRoot .text-btn-danger:focus{color: #565656;}.koRoot .btn.btn-danger.btn-danger-brandable{background-color: #5f5f5f;}.koRoot .btn.btn-danger.btn-danger-brandable:hover{background-color: #565656;}.koRoot button.wbt2.in-records.wbt2-default:hover{color: #7b01e6;}.koRoot .wbt2.withIcon.in-records:hover{color: #7b01e6;}.koRoot .btn-important{color: #FFFFFF !important;background-color: #9012fe;}.koRoot .btn-important:hover{background-color: #8601fb;}.koRoot .btn-important:active{background-color: #7901e1;}.koRoot .file-drag .file-drag-col.col-green{background-color: #9012fe;}.koRoot .w-btn.on{background-color: #8601fb;}.koRoot .w-btn.on:hover{background-color: #7901e1 !important;}.koRoot .w-btn-group.expanded .w-btn.selected{background-color: #8601fb;}.koRoot .w-video-progress > .ui-slider-range{background-color: #9012fe;}.koRoot .w-video-progress > .ui-slider-handle{top: -8px;background-color: #9012fe;}.koRoot .w-video-progress > .ui-slider-handle:active{background-color: #7901e1;}.koRoot .msg_right .msg-body{background-color: #9012fe;color: #FFFFFF;}.koRoot .msg_right .msg-body:before{border-color: transparent transparent #9012fe transparent;}.koRoot .msg.msg_answer .msg-body{background-color: #9012fe;color: #FFFFFF;}.koRoot .snackbar .snackbar-progress{background: #ff121a;background: linear-gradient(to right,  #ff121a 27%, #ff483a  36%, #000000 63%);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6cb170', endColorstr='#3f4e40', GradientType=1);}.koRoot .snackbar .snackbar-progress-file .snackbar-progress-line{background-color: #8601fb;}.koRoot .snackbar.warning{background-color: #ec3939;background-color: rgba(236, 57, 57, 0.9);}.koRoot .user-wrapper.animate .user-animate{border: solid 3px #9012fe;box-shadow: 0px 0px 4px 3px #9012fe, inset 0px 0px 4px 3px #9012fe;}.koRoot .page a.text-btn:hover{color: #8601fb !important;}.koRoot .tag-removable:hover{background-color: #8601fb !important;color: #fff !important;}.koRoot .test-answers .jq-checkbox.radio:active,.koRoot .test-answers .jq-checkbox.radio.checked{color: #8601fb;}.koRoot .w-answer .w-answer-assess .radio-field.correct .jq-radio:active,.koRoot .w-answer .w-answer-assess .radio-field.correct .jq-radio.checked{color: #8601fb;}.koRoot .btn-group .btn{border-right: 1px solid #8601fb;}.koRoot .event-plan-card .event-plan-card-default:hover .event-choice-image{background-color: #9012fe;}.koRoot .event-plan-card .event-plan-card-select .event-choice:hover .event-choice-image,.koRoot .event-plan-card .event-plan-card-select .event-choice:hover .event-choice-row{color: #9012fe;}.koRoot .modal-prepare-webinar.modal-dialog .event-choice:hover .event-choice-image,.koRoot .modal-prepare-webinar.modal-dialog .event-choice:hover .event-choice-row{color: #9012fe;}.koRoot .signin-form.special .recovery-field a,.koRoot .signin-form.special .signin-form-question a{color: #8601fb;}.koRoot .ob-animate{border: solid 3px #9012fe;box-shadow: 0px 0px 4px 3px #9012fe, inset 0px 0px 4px 3px #9012fe;}.koRoot .animate-block{box-shadow: 0px 0px 4px 3px #9012fe, inset 0px 0px 4px 3px #9012fe;}.koRoot .aside-nav li > a.is-active{background-color: #9012fe;}.koRoot .w-preloader .circle-img .spinner{background-image: url('/images/loader-gray.png');}.koRoot .w-folder.active{background: #9012fe;}@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx){.koRoot .w-preloader .circle-img .spinner{background-image: url("/images/loader-gray@2x.png");}}.koRoot .w-preloader.small .circle-img .spinner{background-image: url('/images/loader-small-gray.png');}@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx){.koRoot .w-preloader.small .circle-img .spinner{background-image: url("/images/loader-small-gray@2x.png");}}.koRoot .support-test .loader .load{background-image: url("/images/loader-gray.png");}.koRoot .w-content-holder .file-load{background-image: url("/images/loader-gray.png");}.koRoot .record-converting:after{background-image: url("/images/loader-small-gray.png");}.koRoot .transferProgress .active{background-image: url('/images/_loader-mini-gray.gif');}.koRoot .loading .spiner{background-image: url("/images/loader-gray.png") !important;}.koRoot .enter-page .record-processing:before{background-image: url("/images/loader-small-gray.png");}.koRoot .event-after-landing .record-processing:before{background-image: url("/images/loader-small-gray.png");}.koRoot .file-load-list-item-text:after{background-image: url("/images/loader-small-gray.png");}.koRoot .file-load-grid-item .file-load-grid-item-text:after{background-image: url("/images/loader-small-gray.png");}.koRoot .loader-wrapper .loader,.koRoot .file.file-disabled.load .file-load,.koRoot tr.file-disabled.load td:first-child:after{background-image:url("/images/loader-gray.png");}.koRoot tr.file-disabled.load td:first-child:after{background-image: url("/images/loader-small-gray.png");}.koRoot .ss-seting-loading .spiner{background-image:url("/images/loader-gray.png");}@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx){.koRoot .ss-seting-loading .spiner{background-image:url("/images/loader-gray@2x.png");background-size:auto auto;}.koRoot .support-test .loader .load{background-image: url("/images/loader-gray@2x.png");background-size:auto auto;}.koRoot .w-content-holder .file-load{background-image: url("/images/loader-gray@2x.png");background-size:auto auto;}.koRoot .record-converting:after{background-image: url("/images/loader-small-gray@2x.png");background-size:auto auto;}.koRoot .transferProgress .active{background-image: url('/images/_loader-mini-gray@2x.gif');background-size:auto auto;}.koRoot .loading .spiner{background-image: url("/images/loader-gray@2x.png") !important;background-size:auto auto;}.koRoot .enter-page .record-processing:before{background-image: url("/images/loader-small-gray@2x.png");background-size:auto auto;}.koRoot .event-after-landing .record-processing:before{background-image: url("/images/loader-small-gray@2x.png");background-size:20px 20px;}.koRoot .file-load-list-item-text:after{background-image: url("/images/loader-small-gray@2x.png");background-size:auto auto;}.koRoot .file-load-grid-item .file-load-grid-item-text:after{background-image: url("/images/loader-small-gray@2x.png");background-size:auto auto;}.koRoot .loader-wrapper .loader,.koRoot .file.file-disabled.load .file-load,.koRoot tr.file-disabled.load td:first-child:after{background-image:url("/images/loader-gray@2x.png");background-size:auto auto;}.koRoot tr.file-disabled.load td:first-child:after{background-image: url("/images/loader-small-gray@2x.png");background-size:auto auto;}}.koRoot .msg .msg_select{background-color: #333;}.koRoot .w-btn.on:hover{background-color: #7b01e6;}.koRoot tr.file-disabled.file-active td{background-color: #8a8a8a !important;}.koRoot .selected .w-screen-preview{border: 2px solid #8601fb;}.koRoot .org-view-selector .wbt2.success span{color: #9012fe;}.koRoot .tariff-info .tariff-params .extended .pie-chart-label h1,.koRoot .tariff-info .tariff-params .extended .complex .pie-chart-label .epsilon{color: #9012fe !important;}.koRoot .tariff-info .tariff-params .extended{color: #9012fe;}.koRoot .tariff-info .icon-prev-lg{color: #9012fe;}.koRoot .tariff-info .icon-selected.checked{color: #9012fe;}.koRoot .table-team .dropdown-menu li i{color: #9012fe;}.koRoot .aside-layout-files .aside .aside-footer .dropdown-menu .add-module-link{color: #9012fe;}.koRoot .topbar-create .dropdown-menu li .add-module-link{color: #9012fe;}.koRoot .business-organization-edit-profile .steps .step.passed span{background: #9012fe;}.koRoot .business-organization-edit-profile .steps .step.passed a{color: #9012fe;}.koRoot .modal-enter-register-form .dashed{border-color: #9012fe;}.koRoot .modal-enter-register-form .dashed:hover{border-color:#8601fb;}.koRoot #tariff-summary-popup .icon-custom-info{color: #9012fe;}.koRoot #main-menu-dropdown .dropdown-menu .is-active{color: #9012fe;}.koRoot .mobile-video-view .w-btn.w-action-video-play-overlay{background-color: #9012fe;}.koRoot .file-preview-icon-button{background-color: #9012fe;}.koRoot .file-preview-icon-button:hover{background-color: #8601fb;}.koRoot .file-preview-icon-button:active{background-color: #7901e1;}.koRoot .import-contacts .import-step-order{background-color: #9012fe;}</style>
+<!-- /ko -->
+
+<!-- ko foreach: counters --><!-- /ko -->
+<!-- /ko -->
+  <!-- /ko -->
+  <div class="snackbar-wrapper"></div>
+  <!-- /ko -->
+
+  <!-- ko if: router.errorPage --><!-- /ko -->
+  <div class="modalContainer" id="modalContainer"><div class="modal" id="modal-enter-to-event_0" style="display: block;"><div class="modal-dialog modal-enter-to-event">
+    <div class="modal-content">
+        <div class="close">
+            <a href="#" data-dismiss="modal" class="icon icon-close"></a>
+        </div>
+        <div class="modal-header">
+            <h2><span data-bind="translation: 'event_access_title'">Вход на мероприятие</span> «<span data-bind="text: webinar.data.getField('name')">5884. Практическое занятие 26.10 БАСО-04,05-19</span>»</h2>
+        </div>
+        <div class="modal-body">
+            <form data-bind="submit: tryEnter">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p data-bind="translation: 'event_nick_hint'">Пожалуйста, представьтесь.</p>
+
+                        <!--  ko component:{
+                               name: 'text',
+                               params: {
+                                   value: nick,
+                                   title: l10n.getTranslation('event_nick'),
+                                   name:'name',
+                                   error: errors.nick,
+                                   onFocusoutCallback: checkField
+                               }
+                           } --><div class="input-field form-field is-charged is-valid" data-bind="
+        css: {
+            'form-field': !field.noff,
+            'is-invalid': field.error,
+            'is-charged': field.value,
+            'big-size': params.big,
+            'long-error': !ignoreLongError &amp;&amp; field.error() &amp;&amp; field.error().length > 50,
+            'is-password': field._type === 'password'
+        },
+        focusOutCheck: {
+            field: field
+        },
+        attr: { 'data-testId': params.testId }">
+    <label class="name-field" data-bind="text: field.title, attr:{'for': field.name }" for="name">Имя Фамилия</label>
+    <label class="helper-field" data-bind="text: field.label, attr:{'for': field.name }" for="name">Имя Фамилия</label>
+    <!-- ko if: field.hint() --><!-- /ko -->
+    <!-- ko if: field.type() === 'password' --><!-- /ko -->
+    <!-- ko if: field.type() !== 'password' -->
+    <input data-bind="
+            attr:{'id': field.name,
+                  'name': field.name,
+                  'type': field.type() || 'text',
+                  'readonly': field.readonly() ? 'readonly' : null,
+                  'autocomplete': params.withoutAutoFill ? 'off' : (params.autofill || '')},
+            event:{'keypress':field.keypress, 'keyup':field.keyup, 'change': field.change, 'focusin': field.focusin},
+            textInput: field.value" id="name" name="name" type="text" autocomplete="">
+    <!-- /ko -->
+
+    <!-- ko if: field.count --><!-- /ko -->
+
+    <!-- ko if: field.value() -->
+    <a data-bind="
+        visible: field._type === 'password',
+        click:field.changeShowText" class="input-field-action" href="#" style="display: none;">
+    <span data-bind="
+            translation: 'common_show',
+            visible: !field.showText()" style="display: none;">Показать</span>
+    <span data-bind="
+            translation: 'common_hide',
+            visible: field.showText()">Скрыть</span>
+    </a>
+    <!-- /ko -->
+    <!-- ko if: field.errorShow --><!-- /ko -->
+    <!-- ko if: field.recoveryShow --><!-- /ko -->
+    <!-- ko if: field.commentShow --><!-- /ko -->
+</div>
+<!-- /ko -->
+
+                        <!-- ko if: needPasswd() --><!-- /ko -->
+                    </div>
+                    <!-- ko if: !needPasswd() -->
+                    <!--<div class="col-xs-3">-->
+                        <!--<input type="submit" value="Войти" class="btn btn-important" data-bind="translation: status()">-->
+                    <!--</div>-->
+                    <!-- /ko -->
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <!-- ko if: showAgreement --><!-- /ko -->
+            <input type="submit" value="Подключиться" class="btn btn-important" data-bind="click: tryEnter, translation: status()">
+            <!-- ko if: !withoutSBtn() --><!-- /ko -->
+        </div>
+    </div>
+</div>
+</div></div></div><div class="koRoot"><div class="modal-backdrop in" style="overflow-y: scroll; display: block;"></div></div></body></html>
