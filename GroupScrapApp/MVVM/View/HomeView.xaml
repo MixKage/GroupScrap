@@ -50,7 +50,17 @@
                              VerticalAlignment="Center"
                              HorizontalAlignment="Left"
                              Margin="5"
-                             KeyDown="textBoxUri_KeyDown"/>
+                             KeyDown="textBoxUri_KeyDown" Cursor="IBeam"/>
+                    <TextBox x:Name="textBoxEmail"
+                             materialDesign:HintAssist.Hint="Почта"
+                             materialDesign:HintAssist.IsFloating="True"
+                             Width="250"
+                             Height="40"
+                             Foreground="WhiteSmoke"
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Left"
+                             Margin="5"
+                             KeyDown="textBoxUri_KeyDown" Cursor="IBeam"/>
                     <Button Content="Получить список присутсвующих"
                             Margin="0,20,0,0"
                             Background="#353340"

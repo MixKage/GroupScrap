@@ -187,6 +187,11 @@ namespace GroupScrapApp.MVVM.View
                 textBlockDialog.Text = "Поле с ссылкой путое!";
             else
                 textBlockDialog.Text = "Если Chrome завис - нажмите 'Ctrl +'";
+            s = textBoxEmail.Text.ToString();
+            if (s == null || s == "" || !s.Contains("@"))
+                textBlockDialog.Text = "Поле с почтой путое!";
+            else
+                textBlockDialog.Text = "Если Chrome завис - нажмите 'Ctrl +'";
             bool isExcel = true;
             try
             {
