@@ -32,6 +32,7 @@ namespace GroupScrapApp.MVVM.View
         private void StartScrabPeople(object uri, object isExcel)
         {
             string uriText = (string)uri;
+            string emailText = textBoxEmail.Text;
             string err = "";
             using (var s = new StreamReader(@"groupList.txt", Encoding.UTF8))
             {
@@ -61,7 +62,7 @@ namespace GroupScrapApp.MVVM.View
                     StartInfo = new ProcessStartInfo
                     {
                         FileName = @"GetWeb.exe",
-                        Arguments = uriText,
+                        Arguments = uriText + " " + emailText,
                         UseShellExecute = false,
                         RedirectStandardOutput = true,
                         CreateNoWindow = true
@@ -184,12 +185,26 @@ namespace GroupScrapApp.MVVM.View
         {
             var s = textBoxUri.Text.ToString();
             if (s == null || s == "")
-                textBlockDialog.Text = "Поле с ссылкой путое!";
+            {
+                Dispatcher.Invoke((() =>
+                {
+                    textBlockDialog.Text = "Ошибка, пустая ссылка!";
+                    dialogHome.IsOpen = true;
+                }));
+                return;
+            }
             else
                 textBlockDialog.Text = "Если Chrome завис - нажмите 'Ctrl +'";
             s = textBoxEmail.Text.ToString();
             if (s == null || s == "" || !s.Contains("@"))
-                textBlockDialog.Text = "Поле с почтой путое!";
+            {
+                Dispatcher.Invoke((() =>
+                {
+                    textBlockDialog.Text = "Ошибка, почты!";
+                    dialogHome.IsOpen = true;
+                }));
+                return;
+            }
             else
                 textBlockDialog.Text = "Если Chrome завис - нажмите 'Ctrl +'";
             bool isExcel = true;
