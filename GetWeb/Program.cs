@@ -15,7 +15,7 @@ namespace GetWeb
         [Option('f', "OutFilePath", Default = "ans.html", HelpText = "Path to output file.")]
         public string OutFilePath { get; set; }
 
-        [Value(0, MetaName = "url", HelpText = "URL to webinar.")]
+        [Value(0, Required = true, MetaName = "url", HelpText = "URL to webinar.")]
         public string URL { get; set; }
 
         [Value(1, MetaName = "Email", HelpText = "Email for register")]
