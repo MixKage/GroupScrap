@@ -29,10 +29,10 @@ namespace GroupScrapApp.MVVM.View
             InitializeComponent();
         }
 
-        private void StartScrabPeople(object uri, object isExcel)
+        private void StartScrabPeople(object uri, object isExcel, object s2)
         {
             string uriText = (string)uri;
-            string emailText = textBoxEmail.Text;
+            string emailText = (string)s2;
             string err = "";
             using (var s = new StreamReader(@"groupList.txt", Encoding.UTF8))
             {
@@ -193,10 +193,8 @@ namespace GroupScrapApp.MVVM.View
                 }));
                 return;
             }
-            else
-                textBlockDialog.Text = "Если Chrome завис - нажмите 'Ctrl +'";
-            s = textBoxEmail.Text.ToString();
-            if (s == null || s == "" || !s.Contains("@"))
+            var s2 = textBoxEmail.Text.ToString();
+            if (s2 == null || s2 == "" || !s2.Contains("@"))
             {
                 Dispatcher.Invoke((() =>
                 {
@@ -206,7 +204,7 @@ namespace GroupScrapApp.MVVM.View
                 return;
             }
             else
-                textBlockDialog.Text = "Если Chrome завис - нажмите 'Ctrl +'";
+                textBlockDialog.Text = "Загрузка...";
             bool isExcel = true;
             try
             {
@@ -215,13 +213,13 @@ namespace GroupScrapApp.MVVM.View
             catch
             {
                 isExcel = false;
-                textBlockDialog.Text = "Если Chrome завис - нажмите 'Ctrl +'\nExcel открыт и не даёт открыть файл Output.xlsx на запись, будет открыт .txt";
+                textBlockDialog.Text = "Загрузка...\nExcel открыт и не даёт открыть файл Output.xlsx на запись, будет открыт .txt";
             }
             try
             {
                 Task.Factory.StartNew(() =>
                 {
-                    StartScrabPeople(s, isExcel);
+                    StartScrabPeople(s, isExcel, s2);
                 });
             }
             catch

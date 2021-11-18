@@ -1,5 +1,0 @@
-groupeList>
-generalList>
-outputList>
-addList>
-max_difference>
