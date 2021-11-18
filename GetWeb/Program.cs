@@ -17,8 +17,10 @@ namespace GetWeb
 
         [Value(0, MetaName = "url", HelpText = "URL to webinar.")]
         public string URL { get; set; }
-    }
 
+        [Value(1, MetaName = "Email", HelpText = "Email for register")]
+        public string Email { get; set; }
+    }
 
     internal class Program
     {
@@ -114,7 +116,7 @@ namespace GetWeb
         private static string PrepairStream(IWebDriver driver)
         {
             driver.FindElement(By.LinkText("ЗАРЕГИСТРИРОВАТЬСЯ")).Click(); // Войти в конференциею
-            driver.FindElement(By.Id("email")).SendKeys("1854pro2@gmail.com\tВроде\tЧеловек\t\t\t\t\n"); // Ввод данных
+            driver.FindElement(By.Id("email")).SendKeys($"{CurrentOptions.Email}\tАрхиватор\tЗубенко\t\t\t\t\n"); // Ввод данных
             do
             {
                 var tmp = driver.PageSource;
