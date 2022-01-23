@@ -82,18 +82,6 @@
                                 FontSize="22"
                                 Margin="20,0,0,0" />
 
-                    <Button Background="Transparent"
-                            HorizontalAlignment="Right"
-                            VerticalAlignment="Top"
-                            Grid.Column="1"
-                            Width="25"
-                            Height="25"
-                            Margin="0,5,5,0"
-                            BorderThickness="0"
-                            Style="{StaticResource ExitButtonTheme}"
-                            Command="{Binding CloseCommand}">
-                    </Button>
-
                     <StackPanel Grid.Row="1">
                         <RadioButton Content="Главная"
                                      Height="50"
@@ -110,10 +98,22 @@
                                      Command="{Binding SettingsViewCommand}" />
                     </StackPanel>
 
-                    <ContentControl Grid.Row="1"
+                    <ContentControl Grid.Row="0"
+                                    Grid.RowSpan="2"
                                     Grid.Column="1"
                                     Margin="10"
                                     Content="{Binding CurrentView}" />
+                    <Button Background="Transparent"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Grid.Column="1"
+                            Width="25"
+                            Height="25"
+                            Margin="0,5,5,0"
+                            BorderThickness="0"
+                            Style="{StaticResource ExitButtonTheme}"
+                            Command="{Binding CloseCommand}">
+                    </Button>
 
                 </Grid>
 

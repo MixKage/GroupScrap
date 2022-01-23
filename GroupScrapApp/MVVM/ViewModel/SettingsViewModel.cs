@@ -17,6 +17,7 @@ namespace GroupScrapApp.MVVM.ViewModel
 
         public RelayCommand OpenConfListFile { get; set; }
 
+        public RelayCommand OpenSiteNNC { get; set; }
         public SettingsViewModel()
         {
             OpenListFile = new RelayCommand(o =>
@@ -37,6 +38,12 @@ namespace GroupScrapApp.MVVM.ViewModel
             OpenConfListFile = new RelayCommand(o =>
             {
                 Process p = Process.Start("notepad.exe", @"configEngine.txt");
+            });
+
+            OpenSiteNNC = new RelayCommand(o =>
+            {
+                var uri = new Uri("http://group-hw.ru/");
+                System.Diagnostics.Process.Start("www.nncompany.site");
             });
         }
     }

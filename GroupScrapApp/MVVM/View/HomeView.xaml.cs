@@ -27,8 +27,16 @@ namespace GroupScrapApp.MVVM.View
         public HomeView()
         {
             InitializeComponent();
+            if (IsAdmin()) textInfo.Visibility = Visibility.Collapsed;
+            else textInfo.Visibility = Visibility.Visible;
         }
+        public static bool IsAdmin()
+        {
+            System.Security.Principal.WindowsIdentity id = System.Security.Principal.WindowsIdentity.GetCurrent();
+            System.Security.Principal.WindowsPrincipal p = new System.Security.Principal.WindowsPrincipal(id);
 
+            return p.IsInRole(System.Security.Principal.WindowsBuiltInRole.Administrator);
+        }
         private void StartScrabPeople(object uri, object isExcel, object s2)
         {
             string uriText = (string)uri;

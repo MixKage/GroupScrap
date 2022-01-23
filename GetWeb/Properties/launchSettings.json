@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GetWeb": {
+      "commandName": "Project",
+      "commandLineArgs": "https://events.webinar.ru/3865279/9289705/442f1a47e19caa714a52b600034ca28d"
+    }
+  }
+}
