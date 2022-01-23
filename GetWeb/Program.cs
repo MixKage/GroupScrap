@@ -108,6 +108,7 @@ namespace GetWeb
 
             while (!driver.PageSource.Contains("Row.P_PARTICIPANTS.15"))
             {
+                driver.Manage().Window.Size = new System.Drawing.Size(driver.Manage().Window.Size.Width + 1, driver.Manage().Window.Size.Height);
             } //Костыль переделать
 
             return driver.PageSource;
