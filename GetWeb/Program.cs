@@ -136,6 +136,7 @@ namespace GetWeb
 
             while (!driver.PageSource.Contains("Вроде"))
             {
+                driver.Manage().Window.Size = new System.Drawing.Size(driver.Manage().Window.Size.Width + 1, driver.Manage().Window.Size.Height);
             } //Костыль переделать
 
             return driver.PageSource;
@@ -152,6 +153,7 @@ namespace GetWeb
 
             while (!driver.PageSource.Contains("Вроде"))
             {
+                driver.Manage().Window.Size = new System.Drawing.Size(driver.Manage().Window.Size.Width + 1, driver.Manage().Window.Size.Height);
             } //Костыль переделать
 
             return driver.PageSource;
