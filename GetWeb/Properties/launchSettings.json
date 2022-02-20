@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GetWeb": {
+      "commandName": "Project",
+      "commandLineArgs": "https://events.webinar.ru/21390906/10213657/ee9d2abc7e63289082d9acf8402f37b4 shishov265@gmail.com"
+    }
+  }
+}

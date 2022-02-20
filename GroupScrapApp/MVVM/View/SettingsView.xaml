@@ -126,6 +126,21 @@
                                                  Opacity="0" />
                             </Button.Resources>
                         </Button>
+                        <Button Content="Открыть сайт NNC"
+                                Margin="0,20,0,0"
+                                Width="230"
+                                Background="#353340"
+                                Foreground="WhiteSmoke"
+                                HorizontalAlignment="Center"
+                                Command="{Binding OpenSiteNNC}"
+                                Style="{StaticResource MaterialDesignFlatSecondaryDarkBgButton}"
+                                Cursor="Hand">
+                            <Button.Resources>
+                                <SolidColorBrush x:Key="PrimaryHueMidBrush"
+                                                 Color="BlueViolet"
+                                                 Opacity="0" />
+                            </Button.Resources>
+                        </Button>
                         <CheckBox x:Name="CheckBoxHelp"
                                   Content="Показывать подсказки"
                                   HorizontalAlignment="Center"
@@ -134,7 +149,7 @@
                                   Click="CheckBoxHelp_Click" />
                     </StackPanel>
                 </ScrollViewer>
-                <TextBlock Text="Version 1.1"
+                <TextBlock Text="Version 1.2"
                            Foreground="Wheat"
                            HorizontalAlignment="Right"
                            VerticalAlignment="Bottom"
