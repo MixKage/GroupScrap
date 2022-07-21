@@ -19,4 +19,4 @@
 
 ***
 
-*by NNComapny*
+*by NNCompany*
